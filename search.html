@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>医師をさがす（見本）｜ドクターズ・アーカイブ</title>
+<style>
+:root{
+  --navy:#1f3864; --navy-l:#2e5496; --ink:#2b2b2b; --sub:#6b6b6b;
+  --line:#d9dee8; --bg:#f6f4ef; --card:#fff; --accent:#8a6d3b; --soft:#f0f3f9;
+  --shadow:0 1px 3px rgba(31,56,100,.08),0 8px 24px rgba(31,56,100,.06);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:"Yu Gothic","YuGothic","Hiragino Kaku Gothic ProN","Meiryo",sans-serif;
+  font-size:17px;line-height:1.9;color:var(--ink);background:var(--bg)}
+a{color:var(--navy-l)}
+
+.demo-bar{background:#7a2e2e;color:#fff;text-align:center;font-size:14px;padding:7px 14px;line-height:1.6}
+.demo-bar strong{font-weight:700}
+
+.site-head{background:var(--navy);color:#fff}
+.site-head .inner{max-width:1040px;margin:0 auto;padding:14px 20px;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.logo{font-size:19px;font-weight:700;letter-spacing:.06em}
+.logo span{font-size:12px;font-weight:400;opacity:.8;display:block;letter-spacing:.12em}
+.logo a{color:#fff;text-decoration:none}
+.head-btn{font-size:14px;color:#fff;border:1px solid rgba(255,255,255,.5);
+  border-radius:4px;padding:5px 14px;text-decoration:none;white-space:nowrap}
+.head-btn:hover{background:rgba(255,255,255,.12)}
+
+.hero{max-width:1040px;margin:0 auto;padding:30px 20px 6px}
+.hero h1{font-size:27px;color:var(--navy);margin:0 0 6px;letter-spacing:.04em}
+.hero p{margin:.4em 0;font-size:16.5px}
+.hero .note{font-size:14px;color:var(--sub)}
+
+/* ---- 検索フォーム ---- */
+.finder{max-width:1040px;margin:0 auto;padding:6px 20px 0}
+.finder .box{
+  background:var(--card);border:1px solid var(--line);border-radius:6px;
+  box-shadow:var(--shadow);padding:18px 20px;
+}
+.f-row{display:flex;gap:14px;flex-wrap:wrap;align-items:flex-end}
+.f-item{display:flex;flex-direction:column;gap:4px}
+.f-item label{font-size:13.5px;color:var(--navy-l);font-weight:600}
+.f-item input,.f-item select{
+  font-family:inherit;font-size:16px;padding:9px 12px;
+  border:1px solid #c3cadb;border-radius:4px;background:#fff;min-width:170px;
+}
+.f-item.grow{flex:1 1 240px}
+.f-item.grow input{width:100%}
+.btn{appearance:none;font-family:inherit;font-size:16px;cursor:pointer;
+  background:var(--navy);color:#fff;border:none;border-radius:4px;padding:10px 24px}
+.btn:hover{background:var(--navy-l)}
+.btn.ghost{background:#fff;color:var(--navy-l);border:1px solid var(--line)}
+.btn.ghost:hover{background:var(--soft)}
+.hits{max-width:1040px;margin:0 auto;padding:18px 20px 0;font-size:15px;color:var(--sub)}
+.hits b{color:var(--navy);font-size:18px}
+
+/* ---- 一覧 ---- */
+.list{max-width:1040px;margin:0 auto;padding:10px 20px 60px;
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:18px}
+.doc{
+  background:var(--card);border:1px solid var(--line);border-radius:6px;
+  box-shadow:var(--shadow);padding:18px;display:flex;gap:16px;align-items:flex-start;
+}
+.doc .ph{
+  background:repeating-linear-gradient(45deg,#e9e9e9 0 10px,#e4e4e4 10px 20px);
+  border:1px solid #d5d5d5;border-radius:3px;flex:0 0 84px;aspect-ratio:3/4;
+  display:flex;align-items:center;justify-content:center;color:#8d8d8d;font-size:11px;text-align:center
+}
+.doc-body{flex:1 1 auto;min-width:0}
+.doc-clinic{font-size:13.5px;color:var(--sub);margin:0}
+.doc-name{font-size:21px;color:var(--navy);font-weight:700;margin:1px 0 2px;letter-spacing:.03em}
+.doc-name .kana{font-size:12.5px;color:var(--sub);font-weight:400;display:block;line-height:1.5;margin-top:-2px}
+.doc-meta{list-style:none;margin:8px 0 0;padding:0;font-size:14.5px}
+.doc-meta li{display:flex;gap:10px;padding:2px 0}
+.doc-meta b{flex:0 0 62px;font-size:13px;color:var(--navy-l);font-weight:600}
+.tags{margin:10px 0 0;display:flex;gap:6px;flex-wrap:wrap}
+.tag{font-size:12px;background:var(--soft);color:var(--navy-l);border-radius:3px;padding:2px 9px}
+.doc-foot{margin:14px 0 0;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.link-btn{
+  font-size:14.5px;text-decoration:none;background:var(--navy);color:#fff;
+  border-radius:4px;padding:7px 18px;display:inline-block;
+}
+.link-btn:hover{background:var(--navy-l)}
+.soon{font-size:13.5px;color:var(--sub);background:#eee;border-radius:4px;padding:7px 14px}
+.empty{max-width:1040px;margin:0 auto;padding:0 20px 60px;color:var(--sub)}
+
+.foot{background:#ecebe4;border-top:1px solid var(--line)}
+.foot .inner{max-width:1040px;margin:0 auto;padding:22px 20px 40px;font-size:13.5px;color:var(--sub)}
+
+@media(max-width:640px){
+  body{font-size:16.5px}
+  .hero h1{font-size:22px}
+  .f-item,.f-item input,.f-item select{min-width:0;width:100%}
+  .f-row{gap:10px}
+  .list{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="demo-bar">
+  <strong>これは見本（デモ）です。</strong>掲載している医師・医院はすべて架空です。個別ページは牧野先生の1名分のみ作成しています。
+</div>
+
+<header class="site-head">
+  <div class="inner">
+    <div class="logo"><a href="index.html">ドクターズ・アーカイブ<span>DOCTOR'S ARCHIVE ― 医師の歩みを、次の世代へ</span></a></div>
+    <a class="head-btn" href="index.html">見本の医師ページを見る</a>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>医師をさがす</h1>
+  <p>このサービスに記録を残された先生を、お名前・診療科・地域から検索できます。</p>
+  <p class="note">ご家族が「祖父の記録を見たい」という場合や、同門会・医師会の方が恩師の記録を探す場合にもご利用いただけます。</p>
+</section>
+
+<section class="finder">
+  <div class="box">
+    <div class="f-row">
+      <div class="f-item grow">
+        <label for="q">お名前・医院名・キーワード</label>
+        <input type="search" id="q" placeholder="例：牧野、学校医">
+      </div>
+      <div class="f-item">
+        <label for="dept">診療科</label>
+        <select id="dept">
+          <option value="">すべての診療科</option>
+          <option>内科</option>
+          <option>外科</option>
+          <option>小児科</option>
+          <option>整形外科</option>
+          <option>産婦人科</option>
+          <option>眼科</option>
+        </select>
+      </div>
+      <div class="f-item">
+        <label for="area">地域</label>
+        <select id="area">
+          <option value="">すべての地域</option>
+          <option>東京都</option>
+          <option>神奈川県</option>
+          <option>大阪府</option>
+          <option>愛知県</option>
+          <option>福岡県</option>
+          <option>岩手県</option>
+        </select>
+      </div>
+      <div class="f-item">
+        <label for="sort">並び替え</label>
+        <select id="sort">
+          <option value="year">開業年が古い順</option>
+          <option value="year-desc">開業年が新しい順</option>
+          <option value="name">お名前順</option>
+        </select>
+      </div>
+      <div class="f-item">
+        <label>&nbsp;</label>
+        <button class="btn ghost" id="reset" type="button">条件をクリア</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<p class="hits" id="hits"></p>
+
+<section class="list" id="list"></section>
+<p class="empty" id="empty" hidden>該当する先生が見つかりませんでした。条件を変えてお試しください。</p>
+
+<footer class="foot">
+  <div class="inner">
+    <p>ドクターズ・アーカイブ（仮称）　― 医師として歩んだ人生を、ご家族と社会に残すサービス ―</p>
+    <p>この見本ページは企画のイメージをお伝えするために作成したものです。掲載内容はすべて架空です。</p>
+    <p><a href="index.html">← 見本の医師ページ（牧野 誠一 先生）へ</a></p>
+  </div>
+</footer>
+
+<script>
+var DOCTORS = [
+  { name:'牧野　誠一', kana:'まきの せいいち', clinic:'まきの内科クリニック 名誉院長',
+    dept:'内科', deptFull:'内科・消化器内科', area:'東京都', city:'東京都○○区',
+    year:1981, span:'1981年 開業 ― 2024年 承継',
+    tags:['医院の歴史','学校医 28年','在宅医療','写真 14点'],
+    photo:'顔写真', page:'index.html' },
+  { name:'白川　保', kana:'しらかわ たもつ', clinic:'白川外科医院 院長',
+    dept:'外科', deptFull:'外科・消化器外科', area:'神奈川県', city:'神奈川県○○市',
+    year:1975, span:'1975年 開業 ― 2018年 閉院',
+    tags:['医院史','手術記録','閉院後も保存'],
+    photo:'顔写真', page:'' },
+  { name:'南　千代', kana:'みなみ ちよ', clinic:'みなみ小児科 名誉院長',
+    dept:'小児科', deptFull:'小児科', area:'大阪府', city:'大阪府○○市',
+    year:1988, span:'1988年 開業 ― 現在',
+    tags:['三代にわたる診療','母親学級','地域の記録'],
+    photo:'顔写真', page:'' },
+  { name:'東　義文', kana:'あずま よしふみ', clinic:'○○大学医学部 名誉教授',
+    dept:'整形外科', deptFull:'整形外科', area:'愛知県', city:'愛知県○○市',
+    year:1972, span:'1972年 入局 ― 2016年 退官',
+    tags:['退官記念','論文 128件','教育・後進育成'],
+    photo:'顔写真', page:'' },
+  { name:'古賀　美和', kana:'こが みわ', clinic:'こが産婦人科医院 院長',
+    dept:'産婦人科', deptFull:'産婦人科', area:'福岡県', city:'福岡県○○市',
+    year:1993, span:'1993年 承継 ― 現在',
+    tags:['三代続く医院','出産 6,000件','医院史'],
+    photo:'顔写真', page:'' },
+  { name:'岩渕　健三', kana:'いわぶち けんぞう', clinic:'岩渕眼科医院 名誉院長',
+    dept:'眼科', deptFull:'眼科', area:'岩手県', city:'岩手県○○市',
+    year:1969, span:'1969年 開業 ― 2015年 承継',
+    tags:['へき地医療','巡回検診','昔の診察道具'],
+    photo:'顔写真', page:'' }
+];
+
+var elList = document.getElementById('list'),
+    elHits = document.getElementById('hits'),
+    elEmpty = document.getElementById('empty'),
+    elQ = document.getElementById('q'),
+    elDept = document.getElementById('dept'),
+    elArea = document.getElementById('area'),
+    elSort = document.getElementById('sort');
+
+function esc(s){ return String(s).replace(/[<>&]/g, function(c){ return ({'<':'&lt;','>':'&gt;','&':'&amp;'})[c]; }); }
+
+function card(d){
+  var tags = d.tags.map(function(t){ return '<span class="tag">' + esc(t) + '</span>'; }).join('');
+  var foot = d.page
+    ? '<a class="link-btn" href="' + d.page + '">記録を見る</a><span class="note" style="font-size:13px;color:#6b6b6b">見本として作成したページです</span>'
+    : '<span class="soon">見本では個別ページは未作成</span>';
+  return '<article class="doc">' +
+    '<div class="ph">' + esc(d.photo) + '</div>' +
+    '<div class="doc-body">' +
+      '<p class="doc-clinic">' + esc(d.clinic) + '</p>' +
+      '<p class="doc-name">' + esc(d.name) + '<span class="kana">' + esc(d.kana) + '</span></p>' +
+      '<ul class="doc-meta">' +
+        '<li><b>診療科</b><span>' + esc(d.deptFull) + '</span></li>' +
+        '<li><b>地域</b><span>' + esc(d.city) + '</span></li>' +
+        '<li><b>期間</b><span>' + esc(d.span) + '</span></li>' +
+      '</ul>' +
+      '<div class="tags">' + tags + '</div>' +
+      '<div class="doc-foot">' + foot + '</div>' +
+    '</div></article>';
+}
+
+function render(){
+  var q = elQ.value.trim().toLowerCase();
+  var dept = elDept.value, area = elArea.value, sort = elSort.value;
+  var rows = DOCTORS.filter(function(d){
+    if (dept && d.dept !== dept) return false;
+    if (area && d.area !== area) return false;
+    if (q){
+      var hay = [d.name, d.kana, d.clinic, d.deptFull, d.city].concat(d.tags).join(' ').toLowerCase();
+      if (hay.indexOf(q) < 0) return false;
+    }
+    return true;
+  });
+  rows.sort(function(a,b){
+    if (sort === 'name') return a.kana.localeCompare(b.kana, 'ja');
+    if (sort === 'year-desc') return b.year - a.year;
+    return a.year - b.year;
+  });
+  elList.innerHTML = rows.map(card).join('');
+  elHits.innerHTML = '<b>' + rows.length + '</b> 名の先生が見つかりました　<span style="font-size:13.5px">（見本のため6名分のみ登録しています）</span>';
+  elEmpty.hidden = rows.length > 0;
+}
+
+elQ.addEventListener('input', render);
+elDept.addEventListener('change', render);
+elArea.addEventListener('change', render);
+elSort.addEventListener('change', render);
+document.getElementById('reset').addEventListener('click', function(){
+  elQ.value = ''; elDept.value = ''; elArea.value = ''; elSort.value = 'year';
+  render();
+});
+render();
+</script>
+
+</body>
+</html>

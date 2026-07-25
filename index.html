@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>ドクターズ・アーカイブ（見本）｜まきの内科クリニック 院長 牧野 誠一</title>
+<title>ドクターズ・アーカイブ（見本）｜まきの内科クリニック 名誉院長 牧野 誠一</title>
 <style>
 :root{
   --navy:#1f3864;
@@ -36,19 +36,20 @@ a{color:var(--navy-l)}
 .demo-bar strong{font-weight:700}
 
 /* ---- ヘッダー ---- */
-.site-head{
-  background:var(--navy);color:#fff;
-}
+.site-head{background:var(--navy);color:#fff}
 .site-head .inner{
   max-width:1040px;margin:0 auto;padding:14px 20px;
   display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
 }
 .logo{font-size:19px;font-weight:700;letter-spacing:.06em}
 .logo span{font-size:12px;font-weight:400;opacity:.8;display:block;letter-spacing:.12em}
+.head-nav{display:flex;gap:8px;flex-wrap:wrap}
 .head-btn{
   font-size:14px;color:#fff;border:1px solid rgba(255,255,255,.5);
-  border-radius:4px;padding:5px 14px;text-decoration:none;
+  border-radius:4px;padding:5px 14px;text-decoration:none;background:none;
+  font-family:inherit;cursor:pointer;white-space:nowrap;
 }
+.head-btn:hover{background:rgba(255,255,255,.12)}
 
 /* ---- プロフィール ---- */
 .profile{
@@ -67,8 +68,7 @@ a{color:var(--navy-l)}
 
 /* ---- 写真プレースホルダ（あとから img に差し替え可） ---- */
 .ph{
-  background:
-    repeating-linear-gradient(45deg,#e9e9e9 0 10px,#e4e4e4 10px 20px);
+  background:repeating-linear-gradient(45deg,#e9e9e9 0 10px,#e4e4e4 10px 20px);
   border:1px solid #d5d5d5;border-radius:3px;
   display:flex;align-items:center;justify-content:center;text-align:center;
   color:#8d8d8d;font-size:12.5px;line-height:1.6;padding:8px;
@@ -76,20 +76,18 @@ a{color:var(--navy-l)}
 .ph.portrait-ph{aspect-ratio:3/4}
 .ph.wide{aspect-ratio:4/3}
 .ph.sq{aspect-ratio:1/1}
+.ph.big{aspect-ratio:4/3;font-size:15px}
 
 /* ---- タブ ---- */
 .tabs{
   background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line);
   position:sticky;top:0;z-index:20;
 }
-.tabs .inner{
-  max-width:1040px;margin:0 auto;padding:0 12px;
-  display:flex;gap:2px;overflow-x:auto;
-}
+.tabs .inner{max-width:1040px;margin:0 auto;padding:0 12px;display:flex;gap:2px;overflow-x:auto}
 .tab{
   appearance:none;background:none;border:none;cursor:pointer;
   font-family:inherit;font-size:16px;color:var(--sub);
-  padding:14px 18px;white-space:nowrap;border-bottom:3px solid transparent;
+  padding:14px 16px;white-space:nowrap;border-bottom:3px solid transparent;
 }
 .tab:hover{color:var(--navy)}
 .tab[aria-selected="true"]{color:var(--navy);font-weight:700;border-bottom-color:var(--navy)}
@@ -109,29 +107,28 @@ h3.sub{font-size:17px;color:var(--navy-l);margin:26px 0 6px}
 p{margin:.6em 0}
 .lead{font-size:17.5px}
 .note{font-size:14px;color:var(--sub)}
-
 .card{
   background:var(--card);border:1px solid var(--line);border-radius:6px;
   padding:22px 24px;box-shadow:var(--shadow);margin:14px 0;
 }
+.print-btn{
+  appearance:none;font-family:inherit;font-size:14.5px;cursor:pointer;
+  background:#fff;border:1px solid var(--navy-l);color:var(--navy-l);
+  border-radius:4px;padding:8px 18px;margin:4px 0 0;
+}
+.print-btn:hover{background:var(--soft)}
 
 /* ---- 年表 ---- */
 .tl{list-style:none;margin:18px 0 0;padding:0;position:relative}
 .tl::before{content:"";position:absolute;left:86px;top:6px;bottom:6px;width:2px;background:var(--line)}
 .tl-item{display:flex;gap:0;position:relative;padding-bottom:26px}
-.tl-year{
-  flex:0 0 86px;text-align:right;padding-right:20px;
-  font-size:16px;font-weight:700;color:var(--navy);padding-top:1px;
-}
-.tl-dot{
-  position:absolute;left:80px;top:9px;width:13px;height:13px;border-radius:50%;
-  background:#fff;border:3px solid var(--navy-l);z-index:1;
-}
+.tl-year{flex:0 0 86px;text-align:right;padding-right:20px;font-size:16px;font-weight:700;color:var(--navy);padding-top:1px}
+.tl-dot{position:absolute;left:80px;top:9px;width:13px;height:13px;border-radius:50%;background:#fff;border:3px solid var(--navy-l);z-index:1}
 .tl-body{flex:1 1 auto;padding-left:30px}
 .tl-title{font-size:17px;font-weight:700;margin:0 0 3px}
 .tl-text{margin:0;font-size:15.8px;color:#3d3d3d}
 .tl-photos{display:flex;gap:10px;margin-top:10px;flex-wrap:wrap}
-.tl-photos .ph{width:150px}
+.tl-photos figure{margin:0;width:150px}
 .tl-cap{font-size:12px;color:var(--sub);margin:4px 0 0}
 
 /* ---- 写真アルバム ---- */
@@ -142,11 +139,44 @@ p{margin:.6em 0}
 }
 .filter[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
 .album{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:16px}
-.shot{background:var(--card);border:1px solid var(--line);border-radius:5px;overflow:hidden}
+.shot{background:var(--card);border:1px solid var(--line);border-radius:5px;overflow:hidden;margin:0}
 .shot .ph{border:none;border-radius:0}
 .shot-meta{padding:9px 12px 11px}
 .shot-year{font-size:12.5px;color:var(--accent);font-weight:700;letter-spacing:.06em}
 .shot-title{font-size:14.5px;margin:1px 0 0;line-height:1.6}
+.zoomable{cursor:zoom-in}
+.zoomable:hover .ph{filter:brightness(.96)}
+
+/* ---- 写真の拡大表示（ライトボックス） ---- */
+.lightbox{
+  position:fixed;inset:0;z-index:100;background:rgba(20,24,34,.82);
+  display:none;align-items:center;justify-content:center;padding:24px;
+}
+.lightbox.is-open{display:flex}
+.lb-inner{
+  background:#fff;border-radius:8px;max-width:840px;width:100%;
+  max-height:90vh;overflow:auto;position:relative;
+}
+.lb-close{
+  position:absolute;top:8px;right:10px;appearance:none;background:rgba(255,255,255,.9);
+  border:1px solid var(--line);border-radius:50%;width:38px;height:38px;
+  font-size:20px;line-height:1;cursor:pointer;color:var(--sub);font-family:inherit;
+}
+.lb-body{padding:0}
+.lb-body .ph{border:none;border-radius:8px 8px 0 0;min-height:220px}
+.lb-meta{padding:18px 24px 24px}
+.lb-year{font-size:13.5px;color:var(--accent);font-weight:700;letter-spacing:.08em}
+.lb-title{font-size:20px;color:var(--navy);margin:2px 0 12px}
+.lb-rows{list-style:none;margin:0;padding:0;font-size:15.5px}
+.lb-rows li{display:flex;gap:14px;padding:6px 0;border-bottom:1px dotted var(--line)}
+.lb-rows li:last-child{border-bottom:none}
+.lb-rows b{flex:0 0 96px;font-size:14.5px;color:var(--navy-l);font-weight:600}
+.lb-nav{display:flex;justify-content:space-between;gap:10px;padding:0 24px 20px}
+.lb-nav button{
+  appearance:none;font-family:inherit;font-size:14.5px;cursor:pointer;
+  background:#fff;border:1px solid var(--line);border-radius:4px;padding:8px 16px;color:var(--navy-l);
+}
+.lb-nav button:disabled{opacity:.4;cursor:default}
 
 /* ---- 物語 Q&A ---- */
 .qa{border-left:4px solid var(--soft);padding-left:20px;margin:22px 0}
@@ -158,10 +188,7 @@ p{margin:.6em 0}
 .works li{padding:11px 0;border-bottom:1px solid var(--line);font-size:15.8px}
 .works li:last-child{border-bottom:none}
 .works .y{color:var(--accent);font-weight:700;font-size:14px;margin-right:10px}
-.badge{
-  display:inline-block;font-size:12px;background:var(--soft);color:var(--navy-l);
-  border-radius:3px;padding:2px 8px;margin-right:8px;
-}
+.badge{display:inline-block;font-size:12px;background:var(--soft);color:var(--navy-l);border-radius:3px;padding:2px 8px;margin-right:8px}
 
 /* ---- 家族限定 ---- */
 .lock{max-width:520px;margin:30px auto;text-align:center}
@@ -176,24 +203,42 @@ p{margin:.6em 0}
   background:var(--navy);color:#fff;border:none;border-radius:4px;padding:11px 26px;
 }
 .btn:hover{background:var(--navy-l)}
+.btn.ghost{background:#fff;color:var(--navy-l);border:1px solid var(--line)}
+.btn.ghost:hover{background:var(--soft)}
+.btn:disabled{opacity:.45;cursor:default}
 .hint{font-size:13.5px;color:var(--sub);margin-top:14px}
 .err{color:#a33;font-size:14px;min-height:1.4em;margin:10px 0 0}
-.private-only{
-  background:#fff8e8;border:1px solid #e6d6a8;border-radius:5px;
-  font-size:14px;padding:10px 16px;margin:0 0 18px;
+.private-only{background:#fff8e8;border:1px solid #e6d6a8;border-radius:5px;font-size:14px;padding:10px 16px;margin:0 0 18px}
+
+/* ---- 入力デモ ---- */
+.wiz{max-width:720px;margin:18px auto}
+.wiz-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:6px}
+.wiz-step{font-size:14px;color:var(--sub)}
+.bar{height:7px;background:#e4e7ee;border-radius:4px;overflow:hidden}
+.bar span{display:block;height:100%;background:var(--navy-l);transition:width .3s}
+.wiz-q{font-size:20px;color:var(--navy);font-weight:700;margin:20px 0 4px;line-height:1.7}
+.wiz-help{font-size:14.5px;color:var(--sub);margin:0 0 12px}
+.wiz textarea{
+  width:100%;min-height:130px;font-family:inherit;font-size:16.5px;line-height:1.8;
+  padding:14px;border:1px solid #c3cadb;border-radius:5px;resize:vertical;
 }
+.wiz-tips{font-size:14px;color:var(--sub);margin:10px 0 0;padding-left:1.1em}
+.wiz-tips li{margin:2px 0}
+.wiz-photo{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:16px 0 0;font-size:15px}
+.chip{display:inline-block;background:var(--soft);border:1px solid var(--line);border-radius:16px;font-size:13.5px;padding:3px 12px;color:var(--navy-l)}
+.wiz-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px;align-items:center}
+.saved{font-size:13.5px;color:#2e7d4f;min-height:1.4em}
+.wiz-done .card{border-color:#b9cbe8}
+.preview-tl{margin-top:6px}
 
 /* ---- フッター ---- */
 .foot{background:#ecebe4;border-top:1px solid var(--line)}
-.foot .inner{
-  max-width:1040px;margin:0 auto;padding:22px 20px 40px;
-  font-size:13.5px;color:var(--sub);
-}
-.foot .qr{
-  display:inline-flex;align-items:center;gap:12px;margin-top:10px;
-  background:#fff;border:1px solid var(--line);border-radius:5px;padding:10px 14px;
-}
+.foot .inner{max-width:1040px;margin:0 auto;padding:22px 20px 40px;font-size:13.5px;color:var(--sub)}
+.foot .qr{display:inline-flex;align-items:center;gap:12px;margin-top:10px;background:#fff;border:1px solid var(--line);border-radius:5px;padding:10px 14px}
 .foot .qr .ph{width:64px;height:64px;font-size:10px}
+
+/* ---- 印刷専用の表紙・見出し（画面では隠す） ---- */
+.print-only{display:none}
 
 @media(max-width:640px){
   body{font-size:16.5px}
@@ -209,6 +254,45 @@ p{margin:.6em 0}
   .tl-dot{left:52px}
   .tl-body{padding-left:24px}
   .card{padding:18px 16px}
+  .lb-rows b{flex:0 0 78px}
+  .wiz-q{font-size:18px}
+}
+
+/* ============================================================
+   印刷／PDF保存　＝　記念冊子のイメージ
+   ============================================================ */
+@media print{
+  @page{size:A4;margin:16mm 15mm}
+  body{background:#fff;font-size:10.5pt;line-height:1.75;color:#000}
+  .demo-bar,.tabs,.head-nav,.filters,.print-btn,.lightbox,
+  #lockView,#panel-input,.foot .qr,.tl-dot{display:none!important}
+  .site-head{background:#fff;color:#000;border-bottom:2px solid #1f3864}
+  .site-head .logo{color:#1f3864;font-size:13pt}
+  .site-head .logo span{color:#666}
+  /* 全ページをつなげて1冊にする */
+  .panel{display:block!important;animation:none}
+  .panel{break-before:page;page-break-before:always}
+  #panel-hello{break-before:auto;page-break-before:auto}
+  /* 家族限定の内容も冊子には収める */
+  #familyView[hidden]{display:block!important}
+  .print-only{display:block}
+  .print-cover{text-align:center;padding:22mm 0 14mm;border-bottom:1px solid #999;margin-bottom:10mm}
+  .print-cover .pc-sub{font-size:11pt;color:#555;letter-spacing:.2em}
+  .print-cover .pc-name{font-size:26pt;color:#1f3864;margin:6mm 0 2mm;letter-spacing:.1em}
+  .print-cover .pc-note{font-size:9.5pt;color:#666}
+  .card{box-shadow:none;border:1px solid #bbb;break-inside:avoid;page-break-inside:avoid}
+  h2.sec{break-after:avoid;page-break-after:avoid;font-size:15pt}
+  h3.sub{break-after:avoid;page-break-after:avoid}
+  .tl::before{display:none}
+  .tl-item{break-inside:avoid;page-break-inside:avoid;padding-bottom:6mm;border-left:1px solid #ccc;margin-left:2mm}
+  .tl-year{flex:0 0 70px;padding-right:10px}
+  .tl-body{padding-left:14px}
+  .shot,.qa,.works li{break-inside:avoid;page-break-inside:avoid}
+  .album{grid-template-columns:repeat(3,1fr);gap:6mm}
+  .ph{background:#f4f4f4;border:1px solid #ccc;color:#999}
+  .profile{padding:0 0 6mm}
+  a{color:#000;text-decoration:none}
+  .note,.private-only{color:#555}
 }
 </style>
 </head>
@@ -221,13 +305,30 @@ p{margin:.6em 0}
 <header class="site-head">
   <div class="inner">
     <div class="logo">ドクターズ・アーカイブ<span>DOCTOR'S ARCHIVE ― 医師の歩みを、次の世代へ</span></div>
-    <a class="head-btn" href="#tab-family">ご家族・関係者の方</a>
+    <div class="head-nav">
+      <a class="head-btn" href="search.html">医師をさがす</a>
+      <button class="head-btn" id="toFamily" type="button">ご家族・関係者の方</button>
+    </div>
   </div>
 </header>
 
+<!-- 印刷時のみ表示される表紙 -->
+<div class="print-only print-cover">
+  <p class="pc-sub">記　念　誌</p>
+  <p class="pc-name">牧野　誠一</p>
+  <p>まきの内科クリニック　名誉院長<br>1981年 開業 ― 2024年 承継</p>
+  <p class="pc-note">ドクターズ・アーカイブより出力（見本・架空の内容です）</p>
+</div>
+
 <section class="profile">
   <div class="portrait">
-    <div class="ph portrait-ph">顔写真<br>（3：4）</div>
+    <figure class="zoomable" style="margin:0"
+      data-year="2025年" data-title="診察室での近影"
+      data-place="まきの内科クリニック 第1診察室" data-people="牧野 誠一"
+      data-desc="承継後、名誉院長として週2日の外来を担当。開業時から使っている机で撮影。"
+      data-scope="公開">
+      <div class="ph portrait-ph">顔写真<br>（3：4）</div>
+    </figure>
   </div>
   <div class="p-body">
     <p class="clinic">まきの内科クリニック　名誉院長</p>
@@ -241,6 +342,7 @@ p{margin:.6em 0}
       <li><b>現在</b><span>2024年に承継　名誉院長として週2日の外来を担当</span></li>
       <li><b>記録の公開</b><span>公開ページ　／　ご家族限定ページ（パスワード）</span></li>
     </ul>
+    <button class="print-btn" type="button" onclick="window.print()">この記録を印刷／PDFで保存（記念冊子のイメージ）</button>
   </div>
 </section>
 
@@ -252,6 +354,7 @@ p{margin:.6em 0}
     <button class="tab" role="tab" id="tab-story"  aria-controls="panel-story"  aria-selected="false">医師としての物語</button>
     <button class="tab" role="tab" id="tab-works"  aria-controls="panel-works"  aria-selected="false">業績</button>
     <button class="tab" role="tab" id="tab-family" aria-controls="panel-family" aria-selected="false">ご家族限定</button>
+    <button class="tab" role="tab" id="tab-input"  aria-controls="panel-input"  aria-selected="false">入力のデモ</button>
   </div>
 </nav>
 
@@ -293,8 +396,12 @@ p{margin:.6em 0}
           <p class="tl-title">開業</p>
           <p class="tl-text">木造2階建ての1階を借り、診察室ひとつ、待合室に長椅子2脚で始めました。看護師は妻ひとり。初日の患者さんは3人でした。</p>
           <div class="tl-photos">
-            <div><div class="ph wide">当時の外観</div><p class="tl-cap">1981年／開業当日</p></div>
-            <div><div class="ph wide">最初の診察室</div><p class="tl-cap">1981年頃</p></div>
+            <figure class="zoomable" data-year="1981年" data-title="開業当日の外観" data-place="東京都○○区（旧院舎）" data-people="牧野 誠一・牧野 和子" data-desc="木造2階建ての1階を借りて開業した日。看板の字は書道を教えていた父が書いた。" data-scope="公開">
+              <div class="ph wide">当時の外観</div><p class="tl-cap">1981年／開業当日</p>
+            </figure>
+            <figure class="zoomable" data-year="1981年頃" data-title="最初の診察室" data-place="旧院舎 診察室" data-people="―" data-desc="診察室はひとつ、待合室には長椅子が2脚だけだった。机は現在も使用している。" data-scope="公開">
+              <div class="ph wide">最初の診察室</div><p class="tl-cap">1981年頃</p>
+            </figure>
           </div>
         </div>
       </li>
@@ -304,7 +411,9 @@ p{margin:.6em 0}
           <p class="tl-title">学校医を委嘱される</p>
           <p class="tl-text">近隣の3つの小学校を担当。年2回の内科健診と、保健の授業を受け持ちました。2016年まで28年間務めました。</p>
           <div class="tl-photos">
-            <div><div class="ph wide">健診の様子</div><p class="tl-cap">1990年頃／○○小学校</p></div>
+            <figure class="zoomable" data-year="1990年頃" data-title="学校健診の様子" data-place="○○区立○○小学校 保健室" data-people="牧野 誠一・養護教諭" data-desc="年2回の内科健診。児童が写る写真は登録せず、記録として残すのは医師本人が写るものに限っている。" data-scope="公開">
+              <div class="ph wide">健診の様子</div><p class="tl-cap">1990年頃／○○小学校</p>
+            </figure>
           </div>
         </div>
       </li>
@@ -314,9 +423,15 @@ p{margin:.6em 0}
           <p class="tl-title">新築移転</p>
           <p class="tl-text">患者さんの高齢化に合わせ、段差をなくし、待合室を倍に広げました。車椅子で入れる入口にしたことを、いちばん喜んでいただけました。</p>
           <div class="tl-photos">
-            <div><div class="ph wide">旧院舎</div><p class="tl-cap">1994年／取り壊し前</p></div>
-            <div><div class="ph wide">新院舎</div><p class="tl-cap">1995年／落成</p></div>
-            <div><div class="ph wide">新しい待合室</div><p class="tl-cap">1995年</p></div>
+            <figure class="zoomable" data-year="1994年" data-title="旧院舎（取り壊し前）" data-place="東京都○○区" data-people="―" data-desc="14年間診療した旧院舎。最後の日にスタッフ全員で掃除をしてから引き渡した。" data-scope="公開">
+              <div class="ph wide">旧院舎</div><p class="tl-cap">1994年／取り壊し前</p>
+            </figure>
+            <figure class="zoomable" data-year="1995年" data-title="新院舎 落成" data-place="東京都○○区（現院舎）" data-people="牧野 誠一・スタッフ6名" data-desc="鉄骨2階建て。入口の段差をなくし、車椅子のまま診察室へ入れる造りにした。" data-scope="公開">
+              <div class="ph wide">新院舎</div><p class="tl-cap">1995年／落成</p>
+            </figure>
+            <figure class="zoomable" data-year="1995年" data-title="新しい待合室" data-place="現院舎 1階" data-people="―" data-desc="待合室の広さを倍にした。長椅子から一人掛けの椅子に変え、立ち上がりやすい高さを選んだ。" data-scope="公開">
+              <div class="ph wide">新しい待合室</div><p class="tl-cap">1995年</p>
+            </figure>
           </div>
         </div>
       </li>
@@ -333,7 +448,9 @@ p{margin:.6em 0}
           <p class="tl-title">内視鏡センターを開設</p>
           <p class="tl-text">区の胃がん検診に対応できる体制を整えました。「近所で受けられるから来た」という方が増えたのが何よりでした。</p>
           <div class="tl-photos">
-            <div><div class="ph wide">内視鏡室</div><p class="tl-cap">2010年／開設時</p></div>
+            <figure class="zoomable" data-year="2010年" data-title="内視鏡室（開設時）" data-place="現院舎 2階" data-people="―" data-desc="区の胃がん検診に対応するため増築して設けた。年間400件ほどを担当した。" data-scope="公開">
+              <div class="ph wide">内視鏡室</div><p class="tl-cap">2010年／開設時</p>
+            </figure>
           </div>
         </div>
       </li>
@@ -343,7 +460,9 @@ p{margin:.6em 0}
           <p class="tl-title">感染症流行下の診療</p>
           <p class="tl-text">駐車場にテントを張り、発熱外来を設けました。スタッフ全員が不安な中、誰ひとり辞めずに残ってくれました。</p>
           <div class="tl-photos">
-            <div><div class="ph wide">仮設の発熱外来</div><p class="tl-cap">2020年</p></div>
+            <figure class="zoomable" data-year="2020年" data-title="仮設の発熱外来" data-place="医院駐車場" data-people="スタッフ11名" data-desc="駐車場にテントを張って発熱外来とした。夏はとにかく暑く、氷を配りながら診療した。" data-scope="公開">
+              <div class="ph wide">仮設の発熱外来</div><p class="tl-cap">2020年</p>
+            </figure>
           </div>
         </div>
       </li>
@@ -353,7 +472,9 @@ p{margin:.6em 0}
           <p class="tl-title">長男へ承継</p>
           <p class="tl-text">同じ内科医になった長男に引き継ぎました。私は名誉院長として、週2日だけ外来に出ています。</p>
           <div class="tl-photos">
-            <div><div class="ph wide">承継の記念行事</div><p class="tl-cap">2024年／スタッフ一同</p></div>
+            <figure class="zoomable" data-year="2024年" data-title="承継の記念行事" data-place="現院舎 待合室" data-people="牧野 誠一・牧野 誠・スタッフ11名" data-desc="承継の日、診療を終えた待合室で撮影。43年分の感謝を伝えた。" data-scope="公開">
+              <div class="ph wide">承継の記念行事</div><p class="tl-cap">2024年／スタッフ一同</p>
+            </figure>
           </div>
         </div>
       </li>
@@ -374,7 +495,7 @@ p{margin:.6em 0}
   <!-- ================= 写真アルバム ================= -->
   <section class="panel" id="panel-album" role="tabpanel" aria-labelledby="tab-album">
     <h2 class="sec"><span class="en">PHOTO ARCHIVE</span>写真・資料アルバム</h2>
-    <p>お預かりした写真を、年代と場面ごとに整理して保存しています。写真を選ぶと、撮影年・場所・説明が表示されます。</p>
+    <p>お預かりした写真を、年代と場面ごとに整理して保存しています。<b>写真を選ぶと、撮影年・場所・説明が表示されます。</b></p>
 
     <div class="filters" role="group" aria-label="絞り込み">
       <button class="filter" data-cat="all" aria-pressed="true">すべて</button>
@@ -385,21 +506,35 @@ p{margin:.6em 0}
       <button class="filter" data-cat="doc" aria-pressed="false">資料・記念品</button>
     </div>
 
-    <div class="album">
-      <figure class="shot" data-cat="young"><div class="ph sq">卒業アルバム</div><figcaption class="shot-meta"><span class="shot-year">1978年</span><p class="shot-title">○○大学医学部 卒業式</p></figcaption></figure>
-      <figure class="shot" data-cat="young"><div class="ph sq">白衣の記念写真</div><figcaption class="shot-meta"><span class="shot-year">1979年</span><p class="shot-title">大学病院 第一内科 入局</p></figcaption></figure>
-      <figure class="shot" data-cat="clinic"><div class="ph sq">開業当日の外観</div><figcaption class="shot-meta"><span class="shot-year">1981年</span><p class="shot-title">まきの内科クリニック 開業</p></figcaption></figure>
-      <figure class="shot" data-cat="clinic"><div class="ph sq">最初の診察室</div><figcaption class="shot-meta"><span class="shot-year">1981年</span><p class="shot-title">診察室（開業時）</p></figcaption></figure>
-      <figure class="shot" data-cat="staff"><div class="ph sq">忘年会</div><figcaption class="shot-meta"><span class="shot-year">1985年</span><p class="shot-title">スタッフ4名での忘年会</p></figcaption></figure>
-      <figure class="shot" data-cat="local"><div class="ph sq">学校健診</div><figcaption class="shot-meta"><span class="shot-year">1990年</span><p class="shot-title">○○小学校での内科健診</p></figcaption></figure>
-      <figure class="shot" data-cat="clinic"><div class="ph sq">新院舎 落成</div><figcaption class="shot-meta"><span class="shot-year">1995年</span><p class="shot-title">新築移転（バリアフリー化）</p></figcaption></figure>
-      <figure class="shot" data-cat="local"><div class="ph sq">市民講座</div><figcaption class="shot-meta"><span class="shot-year">1998年</span><p class="shot-title">公民館での健康講座</p></figcaption></figure>
-      <figure class="shot" data-cat="doc"><div class="ph sq">感謝状</div><figcaption class="shot-meta"><span class="shot-year">2001年</span><p class="shot-title">区教育委員会より（学校医功労）</p></figcaption></figure>
-      <figure class="shot" data-cat="clinic"><div class="ph sq">内視鏡室</div><figcaption class="shot-meta"><span class="shot-year">2010年</span><p class="shot-title">内視鏡センター 開設</p></figcaption></figure>
-      <figure class="shot" data-cat="doc"><div class="ph sq">昔の往診鞄</div><figcaption class="shot-meta"><span class="shot-year">―</span><p class="shot-title">開業時から使った往診鞄と聴診器</p></figcaption></figure>
-      <figure class="shot" data-cat="staff"><div class="ph sq">40周年の集合写真</div><figcaption class="shot-meta"><span class="shot-year">2021年</span><p class="shot-title">開業40周年 スタッフ一同</p></figcaption></figure>
-      <figure class="shot" data-cat="staff"><div class="ph sq">承継の日</div><figcaption class="shot-meta"><span class="shot-year">2024年</span><p class="shot-title">長男へ承継、スタッフ11名と</p></figcaption></figure>
-      <figure class="shot" data-cat="doc"><div class="ph sq">手書きのカルテ</div><figcaption class="shot-meta"><span class="shot-year">1981年</span><p class="shot-title">開業初日のカルテ（複写）</p></figcaption></figure>
+    <div class="album" id="albumGrid">
+      <figure class="shot zoomable" data-cat="young" data-year="1978年" data-title="○○大学医学部 卒業式" data-place="○○大学 講堂" data-people="牧野 誠一・同級生" data-desc="卒業アルバムより。この年、大学病院第一内科に入局した。" data-scope="公開">
+        <div class="ph sq">卒業アルバム</div><figcaption class="shot-meta"><span class="shot-year">1978年</span><p class="shot-title">○○大学医学部 卒業式</p></figcaption></figure>
+      <figure class="shot zoomable" data-cat="young" data-year="1979年" data-title="大学病院 第一内科 入局" data-place="○○大学医学部附属病院" data-people="牧野 誠一・指導医 △△先生" data-desc="「検査の数字を見る前に、患者さんの顔を見ろ」と教わった指導医と。" data-scope="公開">
+        <div class="ph sq">白衣の記念写真</div><figcaption class="shot-meta"><span class="shot-year">1979年</span><p class="shot-title">大学病院 第一内科 入局</p></figcaption></figure>
+      <figure class="shot zoomable" data-cat="clinic" data-year="1981年" data-title="まきの内科クリニック 開業" data-place="東京都○○区（旧院舎）" data-people="牧野 誠一・牧野 和子" data-desc="開業当日。初日に来られた患者さんは3人だった。" data-scope="公開">
+        <div class="ph sq">開業当日の外観</div><figcaption class="shot-meta"><span class="shot-year">1981年</span><p class="shot-title">まきの内科クリニック 開業</p></figcaption></figure>
+      <figure class="shot zoomable" data-cat="clinic" data-year="1981年" data-title="診察室（開業時）" data-place="旧院舎 診察室" data-people="―" data-desc="この机は新院舎へ移ったあとも使い続け、現在も名誉院長室に置いている。" data-scope="公開">
+        <div class="ph sq">最初の診察室</div><figcaption class="shot-meta"><span class="shot-year">1981年</span><p class="shot-title">診察室（開業時）</p></figcaption></figure>
+      <figure class="shot zoomable" data-cat="staff" data-year="1985年" data-title="スタッフ4名での忘年会" data-place="○○区の食堂" data-people="牧野 誠一・牧野 和子・看護師2名" data-desc="開業5年目。この年から毎年、年末に全員で集まるようになった。" data-scope="公開">
+        <div class="ph sq">忘年会</div><figcaption class="shot-meta"><span class="shot-year">1985年</span><p class="shot-title">スタッフ4名での忘年会</p></figcaption></figure>
+      <figure class="shot zoomable" data-cat="local" data-year="1990年" data-title="○○小学校での内科健診" data-place="○○区立○○小学校 保健室" data-people="牧野 誠一・養護教諭" data-desc="学校医として28年間担当した。児童が写る写真は登録していない。" data-scope="公開">
+        <div class="ph sq">学校健診</div><figcaption class="shot-meta"><span class="shot-year">1990年</span><p class="shot-title">○○小学校での内科健診</p></figcaption></figure>
+      <figure class="shot zoomable" data-cat="clinic" data-year="1995年" data-title="新築移転（バリアフリー化）" data-place="東京都○○区（現院舎）" data-people="牧野 誠一・スタッフ6名" data-desc="落成の日。車椅子のまま入れる入口を、患者さんにいちばん喜んでいただけた。" data-scope="公開">
+        <div class="ph sq">新院舎 落成</div><figcaption class="shot-meta"><span class="shot-year">1995年</span><p class="shot-title">新築移転（バリアフリー化）</p></figcaption></figure>
+      <figure class="shot zoomable" data-cat="local" data-year="1998年" data-title="公民館での健康講座" data-place="○○区 ○○公民館" data-people="牧野 誠一" data-desc="演題は「かぜと肺炎のちがい」。以後、市民向けの講座を10回以上担当した。" data-scope="公開">
+        <div class="ph sq">市民講座</div><figcaption class="shot-meta"><span class="shot-year">1998年</span><p class="shot-title">公民館での健康講座</p></figcaption></figure>
+      <figure class="shot zoomable" data-cat="doc" data-year="2001年" data-title="感謝状（学校医功労）" data-place="○○区教育委員会" data-people="―" data-desc="13年間の学校医活動に対して。現在も院長室に掛けている。" data-scope="公開">
+        <div class="ph sq">感謝状</div><figcaption class="shot-meta"><span class="shot-year">2001年</span><p class="shot-title">区教育委員会より（学校医功労）</p></figcaption></figure>
+      <figure class="shot zoomable" data-cat="clinic" data-year="2010年" data-title="内視鏡センター 開設" data-place="現院舎 2階" data-people="―" data-desc="区の胃がん検診に対応。「近所で受けられるから来た」という方が増えた。" data-scope="公開">
+        <div class="ph sq">内視鏡室</div><figcaption class="shot-meta"><span class="shot-year">2010年</span><p class="shot-title">内視鏡センター 開設</p></figcaption></figure>
+      <figure class="shot zoomable" data-cat="doc" data-year="撮影年不明" data-title="往診鞄と聴診器" data-place="院長室" data-people="―" data-desc="開業時から使った往診鞄。夜中の往診にはいつもこれを持って自転車で出た。" data-scope="公開">
+        <div class="ph sq">昔の往診鞄</div><figcaption class="shot-meta"><span class="shot-year">―</span><p class="shot-title">開業時から使った往診鞄と聴診器</p></figcaption></figure>
+      <figure class="shot zoomable" data-cat="staff" data-year="2021年" data-title="開業40周年 スタッフ一同" data-place="現院舎 待合室" data-people="牧野 誠一・スタッフ10名" data-desc="感染症の流行が続く中、記念行事は院内だけで小さく行った。" data-scope="公開">
+        <div class="ph sq">40周年の集合写真</div><figcaption class="shot-meta"><span class="shot-year">2021年</span><p class="shot-title">開業40周年 スタッフ一同</p></figcaption></figure>
+      <figure class="shot zoomable" data-cat="staff" data-year="2024年" data-title="承継の日、スタッフ11名と" data-place="現院舎 待合室" data-people="牧野 誠一・牧野 誠・スタッフ11名" data-desc="43年の診療を終えた日。全員に一言ずつ礼を述べた。" data-scope="公開">
+        <div class="ph sq">承継の日</div><figcaption class="shot-meta"><span class="shot-year">2024年</span><p class="shot-title">長男へ承継、スタッフ11名と</p></figcaption></figure>
+      <figure class="shot zoomable" data-cat="doc" data-year="1981年" data-title="開業初日のカルテ（複写）" data-place="院長室 保管" data-people="―" data-desc="患者名は伏せた複写のみを登録している。手書きの字が当時のまま残る。" data-scope="家族限定">
+        <div class="ph sq">手書きのカルテ</div><figcaption class="shot-meta"><span class="shot-year">1981年</span><p class="shot-title">開業初日のカルテ（複写）</p></figcaption></figure>
     </div>
     <p class="note" style="margin-top:18px">※ 患者さんが写っている写真、患者さんを特定できる情報は登録しない方針としています。</p>
   </section>
@@ -407,7 +542,8 @@ p{margin:.6em 0}
   <!-- ================= 物語 ================= -->
   <section class="panel" id="panel-story" role="tabpanel" aria-labelledby="tab-story">
     <h2 class="sec"><span class="en">MY STORY</span>医師としての物語</h2>
-    <p>ご本人に10問前後の質問へお答えいただき、その内容をもとに整理しています。書きにくい場合は、お話を伺って原稿にまとめます。</p>
+    <p>ご本人に10問前後の質問へお答えいただき、その内容をもとに整理しています。書きにくい場合は、お話を伺って原稿にまとめます。<br>
+      <span class="note">→ 実際の入力のしかたは「入力のデモ」タブでお試しいただけます。</span></p>
 
     <div class="card">
       <div class="qa">
@@ -489,7 +625,7 @@ p{margin:.6em 0}
         <p style="margin:18px 0 8px">
           <input id="pw" type="password" inputmode="numeric" placeholder="＿＿＿＿" aria-label="パスワード">
         </p>
-        <p><button class="btn" id="pwBtn">開く</button></p>
+        <p><button class="btn" id="pwBtn" type="button">開く</button></p>
         <p class="err" id="pwErr" role="alert"></p>
         <p class="hint">見本ページのため、パスワードは <b>1981</b> です。<br>（実際は、ご家族ごとに異なるパスワードをお渡しします）</p>
       </div>
@@ -508,10 +644,14 @@ p{margin:.6em 0}
 
       <h3 class="sub">公開していない写真</h3>
       <div class="album">
-        <figure class="shot"><div class="ph sq">家族写真</div><figcaption class="shot-meta"><span class="shot-year">1983年</span><p class="shot-title">医院の前で。長男が生まれた年</p></figcaption></figure>
-        <figure class="shot"><div class="ph sq">自宅の食卓</div><figcaption class="shot-meta"><span class="shot-year">1992年</span><p class="shot-title">往診から帰った夜</p></figcaption></figure>
-        <figure class="shot"><div class="ph sq">妻とスタッフ</div><figcaption class="shot-meta"><span class="shot-year">1981年</span><p class="shot-title">開業を支えてくれた妻・和子</p></figcaption></figure>
-        <figure class="shot"><div class="ph sq">孫と</div><figcaption class="shot-meta"><span class="shot-year">2019年</span><p class="shot-title">診察室で聴診器を持たせた日</p></figcaption></figure>
+        <figure class="shot zoomable" data-year="1983年" data-title="医院の前で。長男が生まれた年" data-place="旧院舎 前" data-people="牧野 誠一・牧野 和子・長男" data-desc="開業2年目。この子が42年後に医院を引き継ぐことになる。" data-scope="家族限定">
+          <div class="ph sq">家族写真</div><figcaption class="shot-meta"><span class="shot-year">1983年</span><p class="shot-title">医院の前で。長男が生まれた年</p></figcaption></figure>
+        <figure class="shot zoomable" data-year="1992年" data-title="往診から帰った夜" data-place="自宅" data-people="牧野 誠一・家族4名" data-desc="夕食に間に合わない日が続いた時期。妻が撮った一枚。" data-scope="家族限定">
+          <div class="ph sq">自宅の食卓</div><figcaption class="shot-meta"><span class="shot-year">1992年</span><p class="shot-title">往診から帰った夜</p></figcaption></figure>
+        <figure class="shot zoomable" data-year="1981年" data-title="開業を支えてくれた妻・和子" data-place="旧院舎 受付" data-people="牧野 和子" data-desc="開業した年は、看護師も受付も妻ひとりだった。" data-scope="家族限定">
+          <div class="ph sq">妻とスタッフ</div><figcaption class="shot-meta"><span class="shot-year">1981年</span><p class="shot-title">開業を支えてくれた妻・和子</p></figcaption></figure>
+        <figure class="shot zoomable" data-year="2019年" data-title="診察室で聴診器を持たせた日" data-place="現院舎 第1診察室" data-people="牧野 誠一・孫2名" data-desc="孫が「おじいちゃんの仕事を見たい」と言って医院に来た日。" data-scope="家族限定">
+          <div class="ph sq">孫と</div><figcaption class="shot-meta"><span class="shot-year">2019年</span><p class="shot-title">診察室で聴診器を持たせた日</p></figcaption></figure>
       </div>
 
       <h3 class="sub">恩師の言葉・書き残したこと</h3>
@@ -546,12 +686,68 @@ p{margin:.6em 0}
     </div>
   </section>
 
+  <!-- ================= 入力のデモ ================= -->
+  <section class="panel" id="panel-input" role="tabpanel" aria-labelledby="tab-input">
+    <h2 class="sec"><span class="en">INPUT DEMO</span>入力のデモ　― 質問に答えるだけで記録ができます</h2>
+    <p>実際に先生にお使いいただく入力画面です。<b>1画面に質問はひとつだけ。</b>答えられない質問は飛ばせます。途中でやめても、入力した内容は保存されます。</p>
+    <p class="note">ご家族や医院のスタッフが、代わりに入力することもできます。文章は箇条書きで結構です。こちらで整えます。</p>
+
+    <div class="wiz" id="wiz">
+      <div class="card">
+        <div class="wiz-head">
+          <span class="wiz-step" id="wizStep">質問 1 / 8</span>
+          <span class="wiz-step" id="wizSaved"></span>
+        </div>
+        <div class="bar"><span id="wizBar" style="width:12.5%"></span></div>
+
+        <p class="wiz-q" id="wizQ">開業されたきっかけを教えてください</p>
+        <p class="wiz-help" id="wizHelp">例：この地域に内科のかかりつけ医が少なかった／知り合いの先生に勧められた</p>
+
+        <textarea id="wizA" aria-label="回答"></textarea>
+
+        <ul class="wiz-tips">
+          <li>箇条書きで結構です。文章はこちらで整えます</li>
+          <li>書きにくい場合は、後日お電話でお伺いします</li>
+          <li>分からない質問は「この質問は飛ばす」を押してください</li>
+        </ul>
+
+        <div class="wiz-photo">
+          <span>写真を添える（任意）</span>
+          <button class="btn ghost" id="wizPhoto" type="button" style="font-size:14.5px;padding:7px 16px">写真を選ぶ</button>
+          <span id="wizPhotoList"></span>
+        </div>
+
+        <div class="wiz-actions">
+          <button class="btn ghost" id="wizPrev" type="button">戻る</button>
+          <button class="btn ghost" id="wizSkip" type="button">この質問は飛ばす</button>
+          <button class="btn" id="wizNext" type="button">次の質問へ</button>
+          <span class="saved" id="wizSavedMsg"></span>
+        </div>
+      </div>
+      <p class="note" id="wizNote">※ このデモで入力した内容は、この端末のブラウザにのみ保存されます。外部には送信されません。</p>
+    </div>
+
+    <div class="wiz wiz-done" id="wizDone" hidden>
+      <div class="card">
+        <h3 class="sub" style="margin-top:0">入力ありがとうございました</h3>
+        <p>お答えいただいた内容は、このあと運営側で文章を整え、次のような形にしてご確認いただきます。</p>
+        <div class="preview-tl" id="wizPreview"></div>
+        <p class="note" style="margin-top:18px">実際の流れ：ご入力 → 運営側で下書き作成 → ご本人・ご家族が確認・修正 → ご承認 → 公開</p>
+        <p style="margin-top:16px">
+          <button class="btn ghost" id="wizRestart" type="button">もう一度はじめから</button>
+          <button class="btn ghost" id="wizToHistory" type="button">「医院の歴史」ページを見る</button>
+        </p>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer class="foot">
   <div class="inner">
     <p>ドクターズ・アーカイブ（仮称）　― 医師として歩んだ人生を、ご家族と社会に残すサービス ―</p>
     <p>この見本ページは企画のイメージをお伝えするために作成したものです。掲載内容はすべて架空です。</p>
+    <p><button class="print-btn" type="button" onclick="window.print()">印刷／PDFで保存（記念冊子のイメージ）</button></p>
     <div class="qr">
       <div class="ph">QR</div>
       <div style="font-size:13px;line-height:1.7">名刺・挨拶状・記念冊子にQRコードを印刷し、<br>ご家族や患者さんがすぐ開けるようにします。</div>
@@ -559,40 +755,111 @@ p{margin:.6em 0}
   </div>
 </footer>
 
+<!-- 写真の拡大表示 -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="写真の詳細">
+  <div class="lb-inner">
+    <button class="lb-close" id="lbClose" type="button" aria-label="閉じる">×</button>
+    <div class="lb-body">
+      <div class="ph big" id="lbPhoto">写真</div>
+      <div class="lb-meta">
+        <span class="lb-year" id="lbYear"></span>
+        <h3 class="lb-title" id="lbTitle"></h3>
+        <ul class="lb-rows">
+          <li><b>撮影年</b><span id="lbYear2"></span></li>
+          <li><b>場所</b><span id="lbPlace"></span></li>
+          <li><b>写っている方</b><span id="lbPeople"></span></li>
+          <li><b>説明</b><span id="lbDesc"></span></li>
+          <li><b>公開範囲</b><span id="lbScope"></span></li>
+        </ul>
+      </div>
+      <div class="lb-nav">
+        <button id="lbPrev" type="button">← 前の写真</button>
+        <button id="lbNext" type="button">次の写真 →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script>
-// ---- タブ切り替え ----
+/* ============ タブ切り替え ============ */
 var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
 function openTab(tab){
   tabs.forEach(function(t){
     var on = (t === tab);
     t.setAttribute('aria-selected', on ? 'true' : 'false');
-    var panel = document.getElementById(t.getAttribute('aria-controls'));
-    panel.classList.toggle('is-open', on);
+    document.getElementById(t.getAttribute('aria-controls')).classList.toggle('is-open', on);
   });
   window.scrollTo({top:0, behavior:'smooth'});
 }
-tabs.forEach(function(t){
-  t.addEventListener('click', function(){ openTab(t); });
-});
-// ヘッダーの「ご家族・関係者の方」リンク
-document.querySelector('.head-btn').addEventListener('click', function(e){
-  e.preventDefault();
+tabs.forEach(function(t){ t.addEventListener('click', function(){ openTab(t); }); });
+document.getElementById('toFamily').addEventListener('click', function(){
   openTab(document.getElementById('tab-family'));
 });
 
-// ---- 写真アルバムの絞り込み ----
+/* ============ 写真アルバムの絞り込み ============ */
 var filters = Array.prototype.slice.call(document.querySelectorAll('.filter'));
 filters.forEach(function(f){
   f.addEventListener('click', function(){
     filters.forEach(function(x){ x.setAttribute('aria-pressed', x === f ? 'true' : 'false'); });
     var cat = f.getAttribute('data-cat');
-    document.querySelectorAll('#panel-album .shot').forEach(function(s){
+    document.querySelectorAll('#albumGrid .shot').forEach(function(s){
       s.style.display = (cat === 'all' || s.getAttribute('data-cat') === cat) ? '' : 'none';
     });
   });
 });
 
-// ---- 家族限定ページ（見本用の簡易パスワード） ----
+/* ============ 写真の拡大表示 ============ */
+var lb = document.getElementById('lightbox');
+var lbList = [], lbIndex = 0;
+
+function visibleZoomables(from){
+  // クリックされた写真と同じ枠（アルバム／年表／家族限定）の中で、表示中のものだけを対象にする
+  var scope = from.closest('#albumGrid') || from.closest('.album') || from.closest('.tl') || document;
+  return Array.prototype.slice.call(scope.querySelectorAll('.zoomable'))
+    .filter(function(el){ return el.offsetParent !== null; });
+}
+function showLb(i){
+  var el = lbList[i];
+  if (!el) return;
+  lbIndex = i;
+  var d = el.dataset;
+  var label = el.querySelector('.ph') ? el.querySelector('.ph').textContent.trim() : '写真';
+  document.getElementById('lbPhoto').textContent = label + '（ここに実際の写真が入ります）';
+  document.getElementById('lbYear').textContent = d.year || '';
+  document.getElementById('lbTitle').textContent = d.title || '';
+  document.getElementById('lbYear2').textContent = d.year || '―';
+  document.getElementById('lbPlace').textContent = d.place || '―';
+  document.getElementById('lbPeople').textContent = d.people || '―';
+  document.getElementById('lbDesc').textContent = d.desc || '―';
+  document.getElementById('lbScope').textContent = d.scope || '公開';
+  document.getElementById('lbPrev').disabled = (i <= 0);
+  document.getElementById('lbNext').disabled = (i >= lbList.length - 1);
+}
+function openLb(el){
+  lbList = visibleZoomables(el);
+  var i = lbList.indexOf(el);
+  showLb(i < 0 ? 0 : i);
+  lb.classList.add('is-open');
+  document.getElementById('lbClose').focus();
+}
+function closeLb(){ lb.classList.remove('is-open'); }
+
+document.addEventListener('click', function(e){
+  var z = e.target.closest ? e.target.closest('.zoomable') : null;
+  if (z) { openLb(z); }
+});
+document.getElementById('lbClose').addEventListener('click', closeLb);
+document.getElementById('lbPrev').addEventListener('click', function(){ showLb(lbIndex - 1); });
+document.getElementById('lbNext').addEventListener('click', function(){ showLb(lbIndex + 1); });
+lb.addEventListener('click', function(e){ if (e.target === lb) closeLb(); });
+document.addEventListener('keydown', function(e){
+  if (!lb.classList.contains('is-open')) return;
+  if (e.key === 'Escape') closeLb();
+  if (e.key === 'ArrowLeft' && lbIndex > 0) showLb(lbIndex - 1);
+  if (e.key === 'ArrowRight' && lbIndex < lbList.length - 1) showLb(lbIndex + 1);
+});
+
+/* ============ 家族限定ページ（見本用の簡易パスワード） ============ */
 var pw = document.getElementById('pw');
 var pwBtn = document.getElementById('pwBtn');
 var pwErr = document.getElementById('pwErr');
@@ -609,6 +876,120 @@ function tryOpen(){
 }
 pwBtn.addEventListener('click', tryOpen);
 pw.addEventListener('keydown', function(e){ if (e.key === 'Enter') tryOpen(); });
+
+/* ============ 入力のデモ（質問ウィザード） ============ */
+var QUESTIONS = [
+  { q:'開業されたきっかけを教えてください',
+    help:'例：この地域に内科のかかりつけ医が少なかった／知り合いの先生に勧められた',
+    label:'開業の経緯' },
+  { q:'医院名の由来を教えてください',
+    help:'例：自分の姓をそのまま付けた／地名から取った／恩師の言葉から',
+    label:'医院名の由来' },
+  { q:'開業した当時の医院の様子はいかがでしたか',
+    help:'例：診察室ひとつ、待合室に長椅子2脚／看護師は妻ひとり／初日の患者さんは3人',
+    label:'開業当時の様子' },
+  { q:'建物や設備で、大きく変わったことはありますか',
+    help:'例：1995年に新築移転してバリアフリーにした／2010年に内視鏡を導入した',
+    label:'建物・設備の変遷' },
+  { q:'地域のために取り組んでこられたことを教えてください',
+    help:'例：学校医を28年務めた／区の検診を担当した／公民館で健康講座を開いた',
+    label:'地域での取り組み' },
+  { q:'いちばん心に残っている出来事は何でしょうか',
+    help:'例：雪の夜の往診／三代にわたって診たご家族／感染症流行下の発熱外来',
+    label:'心に残る出来事' },
+  { q:'スタッフや患者さんとの思い出はありますか',
+    help:'例：毎年の忘年会／40周年の記念行事／誰ひとり辞めずに残ってくれたこと',
+    label:'スタッフ・患者さんとの思い出' },
+  { q:'後を継ぐ方、ご家族へ伝えたいことをお書きください',
+    help:'例：40年間支えてくださった皆様に感謝します／続けることがいちばん難しい',
+    label:'後継者・家族へのメッセージ' }
+];
+var KEY = 'dra-demo-answers-v1';
+var wizIdx = 0;
+var answers = [];
+var photos = [];
+try { var raw = localStorage.getItem(KEY); if (raw) { var o = JSON.parse(raw); answers = o.a || []; photos = o.p || []; } } catch(e){}
+
+var elStep = document.getElementById('wizStep'),
+    elBar = document.getElementById('wizBar'),
+    elQ = document.getElementById('wizQ'),
+    elHelp = document.getElementById('wizHelp'),
+    elA = document.getElementById('wizA'),
+    elPhotoList = document.getElementById('wizPhotoList'),
+    elSavedMsg = document.getElementById('wizSavedMsg'),
+    elSavedTag = document.getElementById('wizSaved');
+
+function renderWiz(){
+  var item = QUESTIONS[wizIdx];
+  elStep.textContent = '質問 ' + (wizIdx + 1) + ' / ' + QUESTIONS.length;
+  elBar.style.width = ((wizIdx + 1) / QUESTIONS.length * 100) + '%';
+  elQ.textContent = item.q;
+  elHelp.textContent = item.help;
+  elA.value = answers[wizIdx] || '';
+  elA.placeholder = '（ここに入力します。空欄のままでも進めます）';
+  var n = (photos[wizIdx] || 0);
+  elPhotoList.innerHTML = n ? '<span class="chip">写真 ' + n + ' 件を添付</span>' : '';
+  document.getElementById('wizPrev').disabled = (wizIdx === 0);
+  document.getElementById('wizNext').textContent = (wizIdx === QUESTIONS.length - 1) ? '入力を終える' : '次の質問へ';
+  var filled = answers.filter(function(a){ return a && a.trim(); }).length;
+  elSavedTag.textContent = filled ? ('入力済み ' + filled + ' 問') : '';
+  elSavedMsg.textContent = '';
+}
+function store(){
+  answers[wizIdx] = elA.value;
+  try { localStorage.setItem(KEY, JSON.stringify({a:answers, p:photos})); } catch(e){}
+}
+function goNext(){
+  store();
+  if (wizIdx === QUESTIONS.length - 1) { finishWiz(); return; }
+  wizIdx++; renderWiz();
+  document.getElementById('wiz').scrollIntoView({behavior:'smooth', block:'start'});
+}
+document.getElementById('wizNext').addEventListener('click', goNext);
+document.getElementById('wizSkip').addEventListener('click', function(){
+  elA.value = ''; goNext();
+});
+document.getElementById('wizPrev').addEventListener('click', function(){
+  store(); if (wizIdx > 0) { wizIdx--; renderWiz(); }
+});
+document.getElementById('wizPhoto').addEventListener('click', function(){
+  photos[wizIdx] = (photos[wizIdx] || 0) + 1;
+  store(); renderWiz();
+  elSavedMsg.textContent = '写真を追加しました（デモのため実際の選択は行いません）';
+});
+elA.addEventListener('input', function(){
+  clearTimeout(elA._t);
+  elA._t = setTimeout(function(){ store(); elSavedMsg.textContent = '下書きを保存しました'; }, 700);
+});
+
+function finishWiz(){
+  var rows = QUESTIONS.map(function(item, i){
+    var a = (answers[i] || '').trim();
+    var n = photos[i] || 0;
+    return '<li class="tl-item" style="padding-bottom:14px">' +
+      '<div class="tl-year" style="flex:0 0 190px;font-size:14.5px">' + item.label + '</div>' +
+      '<span class="tl-dot"></span>' +
+      '<div class="tl-body"><p class="tl-text">' +
+      (a ? a.replace(/[<>&]/g, function(c){ return ({'<':'&lt;','>':'&gt;','&':'&amp;'})[c]; }).replace(/\n/g,'<br>')
+         : '<span class="note">（未入力：後日お電話でお伺いします）</span>') +
+      (n ? ' <span class="chip">写真' + n + '件</span>' : '') +
+      '</p></div></li>';
+  }).join('');
+  document.getElementById('wizPreview').innerHTML = '<ul class="tl" style="margin-top:10px">' + rows + '</ul>';
+  document.getElementById('wiz').hidden = true;
+  document.getElementById('wizDone').hidden = false;
+}
+document.getElementById('wizRestart').addEventListener('click', function(){
+  answers = []; photos = []; wizIdx = 0;
+  try { localStorage.removeItem(KEY); } catch(e){}
+  document.getElementById('wizDone').hidden = true;
+  document.getElementById('wiz').hidden = false;
+  renderWiz();
+});
+document.getElementById('wizToHistory').addEventListener('click', function(){
+  openTab(document.getElementById('tab-history'));
+});
+renderWiz();
 </script>
 
 </body>
