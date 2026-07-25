@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>ドクターズ・アーカイブ（見本）｜まきの内科クリニック 院長 牧野 誠一</title>
+<style>
+:root{
+  --navy:#1f3864;
+  --navy-l:#2e5496;
+  --ink:#2b2b2b;
+  --sub:#6b6b6b;
+  --line:#d9dee8;
+  --bg:#f6f4ef;
+  --card:#ffffff;
+  --accent:#8a6d3b;
+  --soft:#f0f3f9;
+  --shadow:0 1px 3px rgba(31,56,100,.08),0 8px 24px rgba(31,56,100,.06);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  font-family:"Yu Gothic","YuGothic","Hiragino Kaku Gothic ProN","Meiryo",sans-serif;
+  font-size:17px; line-height:1.9; color:var(--ink); background:var(--bg);
+}
+img{max-width:100%;display:block}
+a{color:var(--navy-l)}
+
+/* ---- 見本であることの明示 ---- */
+.demo-bar{
+  background:#7a2e2e;color:#fff;text-align:center;
+  font-size:14px;padding:7px 14px;line-height:1.6;
+}
+.demo-bar strong{font-weight:700}
+
+/* ---- ヘッダー ---- */
+.site-head{
+  background:var(--navy);color:#fff;
+}
+.site-head .inner{
+  max-width:1040px;margin:0 auto;padding:14px 20px;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+}
+.logo{font-size:19px;font-weight:700;letter-spacing:.06em}
+.logo span{font-size:12px;font-weight:400;opacity:.8;display:block;letter-spacing:.12em}
+.head-btn{
+  font-size:14px;color:#fff;border:1px solid rgba(255,255,255,.5);
+  border-radius:4px;padding:5px 14px;text-decoration:none;
+}
+
+/* ---- プロフィール ---- */
+.profile{
+  max-width:1040px;margin:0 auto;padding:28px 20px 8px;
+  display:flex;gap:28px;align-items:flex-start;flex-wrap:wrap;
+}
+.portrait{flex:0 0 190px}
+.p-body{flex:1 1 380px;min-width:280px}
+.clinic{font-size:15px;color:var(--sub);margin:0 0 2px}
+.p-name{font-size:31px;font-weight:700;color:var(--navy);margin:0 0 2px;letter-spacing:.04em}
+.p-kana{font-size:14px;color:var(--sub);margin:0 0 14px}
+.p-meta{list-style:none;margin:0;padding:0;font-size:15.5px}
+.p-meta li{padding:3px 0;border-bottom:1px dotted var(--line);display:flex;gap:12px}
+.p-meta li:last-child{border-bottom:none}
+.p-meta b{flex:0 0 108px;font-weight:600;color:var(--navy-l);font-size:14.5px}
+
+/* ---- 写真プレースホルダ（あとから img に差し替え可） ---- */
+.ph{
+  background:
+    repeating-linear-gradient(45deg,#e9e9e9 0 10px,#e4e4e4 10px 20px);
+  border:1px solid #d5d5d5;border-radius:3px;
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  color:#8d8d8d;font-size:12.5px;line-height:1.6;padding:8px;
+}
+.ph.portrait-ph{aspect-ratio:3/4}
+.ph.wide{aspect-ratio:4/3}
+.ph.sq{aspect-ratio:1/1}
+
+/* ---- タブ ---- */
+.tabs{
+  background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  position:sticky;top:0;z-index:20;
+}
+.tabs .inner{
+  max-width:1040px;margin:0 auto;padding:0 12px;
+  display:flex;gap:2px;overflow-x:auto;
+}
+.tab{
+  appearance:none;background:none;border:none;cursor:pointer;
+  font-family:inherit;font-size:16px;color:var(--sub);
+  padding:14px 18px;white-space:nowrap;border-bottom:3px solid transparent;
+}
+.tab:hover{color:var(--navy)}
+.tab[aria-selected="true"]{color:var(--navy);font-weight:700;border-bottom-color:var(--navy)}
+
+/* ---- 本文 ---- */
+main{max-width:1040px;margin:0 auto;padding:8px 20px 60px}
+.panel{display:none;animation:fade .25s ease}
+.panel.is-open{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+h2.sec{
+  font-size:21px;color:var(--navy);margin:34px 0 4px;padding-bottom:8px;
+  border-bottom:2px solid var(--navy);letter-spacing:.04em;
+}
+h2.sec .en{font-size:11px;color:var(--sub);font-weight:400;letter-spacing:.14em;display:block}
+h3.sub{font-size:17px;color:var(--navy-l);margin:26px 0 6px}
+p{margin:.6em 0}
+.lead{font-size:17.5px}
+.note{font-size:14px;color:var(--sub)}
+
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:6px;
+  padding:22px 24px;box-shadow:var(--shadow);margin:14px 0;
+}
+
+/* ---- 年表 ---- */
+.tl{list-style:none;margin:18px 0 0;padding:0;position:relative}
+.tl::before{content:"";position:absolute;left:86px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.tl-item{display:flex;gap:0;position:relative;padding-bottom:26px}
+.tl-year{
+  flex:0 0 86px;text-align:right;padding-right:20px;
+  font-size:16px;font-weight:700;color:var(--navy);padding-top:1px;
+}
+.tl-dot{
+  position:absolute;left:80px;top:9px;width:13px;height:13px;border-radius:50%;
+  background:#fff;border:3px solid var(--navy-l);z-index:1;
+}
+.tl-body{flex:1 1 auto;padding-left:30px}
+.tl-title{font-size:17px;font-weight:700;margin:0 0 3px}
+.tl-text{margin:0;font-size:15.8px;color:#3d3d3d}
+.tl-photos{display:flex;gap:10px;margin-top:10px;flex-wrap:wrap}
+.tl-photos .ph{width:150px}
+.tl-cap{font-size:12px;color:var(--sub);margin:4px 0 0}
+
+/* ---- 写真アルバム ---- */
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 18px}
+.filter{
+  appearance:none;background:#fff;border:1px solid var(--line);border-radius:20px;
+  font-family:inherit;font-size:14.5px;color:var(--sub);padding:6px 16px;cursor:pointer;
+}
+.filter[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
+.album{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:16px}
+.shot{background:var(--card);border:1px solid var(--line);border-radius:5px;overflow:hidden}
+.shot .ph{border:none;border-radius:0}
+.shot-meta{padding:9px 12px 11px}
+.shot-year{font-size:12.5px;color:var(--accent);font-weight:700;letter-spacing:.06em}
+.shot-title{font-size:14.5px;margin:1px 0 0;line-height:1.6}
+
+/* ---- 物語 Q&A ---- */
+.qa{border-left:4px solid var(--soft);padding-left:20px;margin:22px 0}
+.qa-q{font-size:16px;font-weight:700;color:var(--navy-l);margin:0 0 4px}
+.qa-a{margin:0;font-size:16.5px}
+
+/* ---- 業績 ---- */
+.works{list-style:none;margin:10px 0 0;padding:0}
+.works li{padding:11px 0;border-bottom:1px solid var(--line);font-size:15.8px}
+.works li:last-child{border-bottom:none}
+.works .y{color:var(--accent);font-weight:700;font-size:14px;margin-right:10px}
+.badge{
+  display:inline-block;font-size:12px;background:var(--soft);color:var(--navy-l);
+  border-radius:3px;padding:2px 8px;margin-right:8px;
+}
+
+/* ---- 家族限定 ---- */
+.lock{max-width:520px;margin:30px auto;text-align:center}
+.lock .card{padding:30px 26px}
+.lock-icon{font-size:30px}
+.lock input{
+  font-family:inherit;font-size:17px;padding:10px 14px;width:200px;
+  border:1px solid #c3cadb;border-radius:4px;text-align:center;letter-spacing:.2em;
+}
+.btn{
+  appearance:none;font-family:inherit;font-size:16px;cursor:pointer;
+  background:var(--navy);color:#fff;border:none;border-radius:4px;padding:11px 26px;
+}
+.btn:hover{background:var(--navy-l)}
+.hint{font-size:13.5px;color:var(--sub);margin-top:14px}
+.err{color:#a33;font-size:14px;min-height:1.4em;margin:10px 0 0}
+.private-only{
+  background:#fff8e8;border:1px solid #e6d6a8;border-radius:5px;
+  font-size:14px;padding:10px 16px;margin:0 0 18px;
+}
+
+/* ---- フッター ---- */
+.foot{background:#ecebe4;border-top:1px solid var(--line)}
+.foot .inner{
+  max-width:1040px;margin:0 auto;padding:22px 20px 40px;
+  font-size:13.5px;color:var(--sub);
+}
+.foot .qr{
+  display:inline-flex;align-items:center;gap:12px;margin-top:10px;
+  background:#fff;border:1px solid var(--line);border-radius:5px;padding:10px 14px;
+}
+.foot .qr .ph{width:64px;height:64px;font-size:10px}
+
+@media(max-width:640px){
+  body{font-size:16.5px}
+  .profile{padding-top:20px;gap:18px}
+  .portrait{flex:0 0 130px}
+  .p-name{font-size:26px}
+  .p-meta b{flex:0 0 92px}
+  /* タブは横スクロールにせず、折り返して全項目を見せる */
+  .tabs .inner{flex-wrap:wrap;overflow-x:visible;gap:0;padding:0 6px}
+  .tab{flex:1 1 33%;padding:11px 4px;font-size:14.5px;text-align:center}
+  .tl::before{left:58px}
+  .tl-year{flex:0 0 58px;padding-right:12px;font-size:15px}
+  .tl-dot{left:52px}
+  .tl-body{padding-left:24px}
+  .card{padding:18px 16px}
+}
+</style>
+</head>
+<body>
+
+<div class="demo-bar">
+  <strong>これは見本（デモ）です。</strong>登場する医師・医院・出来事はすべて架空のもので、実在の人物や施設とは関係ありません。写真部分は枠のみ表示しています。
+</div>
+
+<header class="site-head">
+  <div class="inner">
+    <div class="logo">ドクターズ・アーカイブ<span>DOCTOR'S ARCHIVE ― 医師の歩みを、次の世代へ</span></div>
+    <a class="head-btn" href="#tab-family">ご家族・関係者の方</a>
+  </div>
+</header>
+
+<section class="profile">
+  <div class="portrait">
+    <div class="ph portrait-ph">顔写真<br>（3：4）</div>
+  </div>
+  <div class="p-body">
+    <p class="clinic">まきの内科クリニック　名誉院長</p>
+    <h1 class="p-name">牧野　誠一</h1>
+    <p class="p-kana">まきの　せいいち　／　Seiichi Makino</p>
+    <ul class="p-meta">
+      <li><b>診療科</b><span>内科・消化器内科</span></li>
+      <li><b>医師免許</b><span>1978年 取得（医籍登録）</span></li>
+      <li><b>出身大学</b><span>○○大学医学部　1978年 卒業</span></li>
+      <li><b>開業</b><span>1981年　まきの内科クリニック（東京都○○区）</span></li>
+      <li><b>現在</b><span>2024年に承継　名誉院長として週2日の外来を担当</span></li>
+      <li><b>記録の公開</b><span>公開ページ　／　ご家族限定ページ（パスワード）</span></li>
+    </ul>
+  </div>
+</section>
+
+<nav class="tabs" aria-label="ページ切り替え">
+  <div class="inner" role="tablist">
+    <button class="tab" role="tab" id="tab-hello"  aria-controls="panel-hello"  aria-selected="true">ごあいさつ</button>
+    <button class="tab" role="tab" id="tab-history" aria-controls="panel-history" aria-selected="false">医院の歴史</button>
+    <button class="tab" role="tab" id="tab-album"  aria-controls="panel-album"  aria-selected="false">写真アルバム</button>
+    <button class="tab" role="tab" id="tab-story"  aria-controls="panel-story"  aria-selected="false">医師としての物語</button>
+    <button class="tab" role="tab" id="tab-works"  aria-controls="panel-works"  aria-selected="false">業績</button>
+    <button class="tab" role="tab" id="tab-family" aria-controls="panel-family" aria-selected="false">ご家族限定</button>
+  </div>
+</nav>
+
+<main>
+
+  <!-- ================= ごあいさつ ================= -->
+  <section class="panel is-open" id="panel-hello" role="tabpanel" aria-labelledby="tab-hello">
+    <h2 class="sec"><span class="en">GREETING</span>ごあいさつ</h2>
+    <div class="card">
+      <p class="lead">昭和56年、この町に小さな診療所を開きました。当時この地域には内科のかかりつけ医が少なく、「歩いて通える町医者がいてほしい」という声を聞いたのが始まりでした。</p>
+      <p>以来43年、風邪の子どもから寝たきりのご高齢の方まで、この町の皆さまに支えられて診療を続けてまいりました。学校医として近隣の小学校に通い、検診で地域をまわり、夜中の往診に出た日もありました。</p>
+      <p>2024年、息子に医院を引き継ぎました。振り返れば、私一人でできたことは何もありません。スタッフ、家族、そして患者の皆さまのおかげです。この記録は、その方々への感謝を残しておきたいという気持ちで作りました。</p>
+      <p class="note">2026年　牧野　誠一</p>
+    </div>
+
+    <h2 class="sec"><span class="en">SUMMARY</span>歩みの概要</h2>
+    <ul class="p-meta card" style="box-shadow:none">
+      <li><b>1978年</b><span>○○大学医学部を卒業、大学病院第一内科に入局</span></li>
+      <li><b>1981年</b><span>まきの内科クリニックを開業（東京都○○区）</span></li>
+      <li><b>1988年</b><span>近隣3小学校の学校医を委嘱される（2016年まで）</span></li>
+      <li><b>1995年</b><span>医院を新築移転（バリアフリー化）</span></li>
+      <li><b>2010年</b><span>内視鏡センターを開設、地域の検診に対応</span></li>
+      <li><b>2024年</b><span>長男・牧野 誠に承継、名誉院長となる</span></li>
+    </ul>
+    <p class="note">→ くわしくは「医院の歴史」をご覧ください。</p>
+  </section>
+
+  <!-- ================= 医院の歴史 ================= -->
+  <section class="panel" id="panel-history" role="tabpanel" aria-labelledby="tab-history">
+    <h2 class="sec"><span class="en">CLINIC HISTORY</span>まきの内科クリニックの歴史</h2>
+    <div class="card">
+      <p><b>医院名の由来</b>　自分の姓をそのまま付けました。「牧野さんのところ」と呼んでもらえる医院にしたかったからです。看板の字は、書道を教えていた父に書いてもらいました。</p>
+    </div>
+
+    <ul class="tl">
+      <li class="tl-item">
+        <div class="tl-year">1981年</div><span class="tl-dot"></span>
+        <div class="tl-body">
+          <p class="tl-title">開業</p>
+          <p class="tl-text">木造2階建ての1階を借り、診察室ひとつ、待合室に長椅子2脚で始めました。看護師は妻ひとり。初日の患者さんは3人でした。</p>
+          <div class="tl-photos">
+            <div><div class="ph wide">当時の外観</div><p class="tl-cap">1981年／開業当日</p></div>
+            <div><div class="ph wide">最初の診察室</div><p class="tl-cap">1981年頃</p></div>
+          </div>
+        </div>
+      </li>
+      <li class="tl-item">
+        <div class="tl-year">1988年</div><span class="tl-dot"></span>
+        <div class="tl-body">
+          <p class="tl-title">学校医を委嘱される</p>
+          <p class="tl-text">近隣の3つの小学校を担当。年2回の内科健診と、保健の授業を受け持ちました。2016年まで28年間務めました。</p>
+          <div class="tl-photos">
+            <div><div class="ph wide">健診の様子</div><p class="tl-cap">1990年頃／○○小学校</p></div>
+          </div>
+        </div>
+      </li>
+      <li class="tl-item">
+        <div class="tl-year">1995年</div><span class="tl-dot"></span>
+        <div class="tl-body">
+          <p class="tl-title">新築移転</p>
+          <p class="tl-text">患者さんの高齢化に合わせ、段差をなくし、待合室を倍に広げました。車椅子で入れる入口にしたことを、いちばん喜んでいただけました。</p>
+          <div class="tl-photos">
+            <div><div class="ph wide">旧院舎</div><p class="tl-cap">1994年／取り壊し前</p></div>
+            <div><div class="ph wide">新院舎</div><p class="tl-cap">1995年／落成</p></div>
+            <div><div class="ph wide">新しい待合室</div><p class="tl-cap">1995年</p></div>
+          </div>
+        </div>
+      </li>
+      <li class="tl-item">
+        <div class="tl-year">2003年</div><span class="tl-dot"></span>
+        <div class="tl-body">
+          <p class="tl-title">在宅医療を始める</p>
+          <p class="tl-text">通院できなくなった患者さんのお宅へ伺うようになりました。最期をご自宅で迎えられた方を、20年間で100人以上お見送りしました。</p>
+        </div>
+      </li>
+      <li class="tl-item">
+        <div class="tl-year">2010年</div><span class="tl-dot"></span>
+        <div class="tl-body">
+          <p class="tl-title">内視鏡センターを開設</p>
+          <p class="tl-text">区の胃がん検診に対応できる体制を整えました。「近所で受けられるから来た」という方が増えたのが何よりでした。</p>
+          <div class="tl-photos">
+            <div><div class="ph wide">内視鏡室</div><p class="tl-cap">2010年／開設時</p></div>
+          </div>
+        </div>
+      </li>
+      <li class="tl-item">
+        <div class="tl-year">2020年</div><span class="tl-dot"></span>
+        <div class="tl-body">
+          <p class="tl-title">感染症流行下の診療</p>
+          <p class="tl-text">駐車場にテントを張り、発熱外来を設けました。スタッフ全員が不安な中、誰ひとり辞めずに残ってくれました。</p>
+          <div class="tl-photos">
+            <div><div class="ph wide">仮設の発熱外来</div><p class="tl-cap">2020年</p></div>
+          </div>
+        </div>
+      </li>
+      <li class="tl-item">
+        <div class="tl-year">2024年</div><span class="tl-dot"></span>
+        <div class="tl-body">
+          <p class="tl-title">長男へ承継</p>
+          <p class="tl-text">同じ内科医になった長男に引き継ぎました。私は名誉院長として、週2日だけ外来に出ています。</p>
+          <div class="tl-photos">
+            <div><div class="ph wide">承継の記念行事</div><p class="tl-cap">2024年／スタッフ一同</p></div>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <h2 class="sec"><span class="en">RECORDS</span>医院の記録</h2>
+    <div class="card">
+      <ul class="p-meta" style="font-size:15.5px">
+        <li><b>歴代院長</b><span>初代 牧野 誠一（1981–2024）／二代 牧野 誠（2024–）</span></li>
+        <li><b>建物</b><span>1981年 木造賃貸 → 1995年 新築（鉄骨2階） → 2010年 増築</span></li>
+        <li><b>診療科の変化</b><span>内科 → 内科・消化器内科（2010年 内視鏡導入）</span></li>
+        <li><b>スタッフ数</b><span>1981年 2名 → 1995年 6名 → 2024年 11名</span></li>
+        <li><b>地域での役割</b><span>学校医（1988–2016）／区医師会理事（2005–2011）／区の胃がん検診担当医</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= 写真アルバム ================= -->
+  <section class="panel" id="panel-album" role="tabpanel" aria-labelledby="tab-album">
+    <h2 class="sec"><span class="en">PHOTO ARCHIVE</span>写真・資料アルバム</h2>
+    <p>お預かりした写真を、年代と場面ごとに整理して保存しています。写真を選ぶと、撮影年・場所・説明が表示されます。</p>
+
+    <div class="filters" role="group" aria-label="絞り込み">
+      <button class="filter" data-cat="all" aria-pressed="true">すべて</button>
+      <button class="filter" data-cat="young" aria-pressed="false">学生・研修時代</button>
+      <button class="filter" data-cat="clinic" aria-pressed="false">医院</button>
+      <button class="filter" data-cat="staff" aria-pressed="false">スタッフ・行事</button>
+      <button class="filter" data-cat="local" aria-pressed="false">地域活動</button>
+      <button class="filter" data-cat="doc" aria-pressed="false">資料・記念品</button>
+    </div>
+
+    <div class="album">
+      <figure class="shot" data-cat="young"><div class="ph sq">卒業アルバム</div><figcaption class="shot-meta"><span class="shot-year">1978年</span><p class="shot-title">○○大学医学部 卒業式</p></figcaption></figure>
+      <figure class="shot" data-cat="young"><div class="ph sq">白衣の記念写真</div><figcaption class="shot-meta"><span class="shot-year">1979年</span><p class="shot-title">大学病院 第一内科 入局</p></figcaption></figure>
+      <figure class="shot" data-cat="clinic"><div class="ph sq">開業当日の外観</div><figcaption class="shot-meta"><span class="shot-year">1981年</span><p class="shot-title">まきの内科クリニック 開業</p></figcaption></figure>
+      <figure class="shot" data-cat="clinic"><div class="ph sq">最初の診察室</div><figcaption class="shot-meta"><span class="shot-year">1981年</span><p class="shot-title">診察室（開業時）</p></figcaption></figure>
+      <figure class="shot" data-cat="staff"><div class="ph sq">忘年会</div><figcaption class="shot-meta"><span class="shot-year">1985年</span><p class="shot-title">スタッフ4名での忘年会</p></figcaption></figure>
+      <figure class="shot" data-cat="local"><div class="ph sq">学校健診</div><figcaption class="shot-meta"><span class="shot-year">1990年</span><p class="shot-title">○○小学校での内科健診</p></figcaption></figure>
+      <figure class="shot" data-cat="clinic"><div class="ph sq">新院舎 落成</div><figcaption class="shot-meta"><span class="shot-year">1995年</span><p class="shot-title">新築移転（バリアフリー化）</p></figcaption></figure>
+      <figure class="shot" data-cat="local"><div class="ph sq">市民講座</div><figcaption class="shot-meta"><span class="shot-year">1998年</span><p class="shot-title">公民館での健康講座</p></figcaption></figure>
+      <figure class="shot" data-cat="doc"><div class="ph sq">感謝状</div><figcaption class="shot-meta"><span class="shot-year">2001年</span><p class="shot-title">区教育委員会より（学校医功労）</p></figcaption></figure>
+      <figure class="shot" data-cat="clinic"><div class="ph sq">内視鏡室</div><figcaption class="shot-meta"><span class="shot-year">2010年</span><p class="shot-title">内視鏡センター 開設</p></figcaption></figure>
+      <figure class="shot" data-cat="doc"><div class="ph sq">昔の往診鞄</div><figcaption class="shot-meta"><span class="shot-year">―</span><p class="shot-title">開業時から使った往診鞄と聴診器</p></figcaption></figure>
+      <figure class="shot" data-cat="staff"><div class="ph sq">40周年の集合写真</div><figcaption class="shot-meta"><span class="shot-year">2021年</span><p class="shot-title">開業40周年 スタッフ一同</p></figcaption></figure>
+      <figure class="shot" data-cat="staff"><div class="ph sq">承継の日</div><figcaption class="shot-meta"><span class="shot-year">2024年</span><p class="shot-title">長男へ承継、スタッフ11名と</p></figcaption></figure>
+      <figure class="shot" data-cat="doc"><div class="ph sq">手書きのカルテ</div><figcaption class="shot-meta"><span class="shot-year">1981年</span><p class="shot-title">開業初日のカルテ（複写）</p></figcaption></figure>
+    </div>
+    <p class="note" style="margin-top:18px">※ 患者さんが写っている写真、患者さんを特定できる情報は登録しない方針としています。</p>
+  </section>
+
+  <!-- ================= 物語 ================= -->
+  <section class="panel" id="panel-story" role="tabpanel" aria-labelledby="tab-story">
+    <h2 class="sec"><span class="en">MY STORY</span>医師としての物語</h2>
+    <p>ご本人に10問前後の質問へお答えいただき、その内容をもとに整理しています。書きにくい場合は、お話を伺って原稿にまとめます。</p>
+
+    <div class="card">
+      <div class="qa">
+        <p class="qa-q">医師を志した最初のきっかけは何でしたか</p>
+        <p class="qa-a">小学生のとき、祖母が自宅で寝込んだことがありました。往診に来てくださった町のお医者さんが、帰りぎわに祖母の手を握って「また来るからね」と言った。あの一言で祖母の顔が変わったのを、今でも覚えています。薬よりも、あの言葉が効いたのだと思いました。</p>
+      </div>
+      <div class="qa">
+        <p class="qa-q">専門分野を選んだ理由を教えてください</p>
+        <p class="qa-a">内科を選んだのは、患者さんと長く付き合える科だと思ったからです。町医者は、一度診たらその方の一生を診ることになります。</p>
+      </div>
+      <div class="qa">
+        <p class="qa-q">最も影響を受けた先生はどなたですか</p>
+        <p class="qa-a">大学病院の指導医だった△△先生です。「検査の数字を見る前に、患者さんの顔を見ろ」と何度も言われました。開業してからのほうが、その意味が分かるようになりました。</p>
+      </div>
+      <div class="qa">
+        <p class="qa-q">忘れられない出来事はありますか</p>
+        <p class="qa-a">開業して間もない冬、夜中に往診へ呼ばれました。雪の中を自転車で向かい、朝までそのお宅にいました。できることは限られていましたが、ご家族が「先生がいてくれてよかった」と言ってくださった。あの晩に、この町でやっていく覚悟が決まりました。</p>
+      </div>
+      <div class="qa">
+        <p class="qa-q">医師として大切にしてきた考えは何ですか</p>
+        <p class="qa-a">「治せない病気でも、支えることはできる」ということです。在宅で最期を迎える方を診るようになってから、いっそう強く思うようになりました。</p>
+      </div>
+      <div class="qa">
+        <p class="qa-q">医師人生で最も誇りに思う仕事は何ですか</p>
+        <p class="qa-a">28年間、学校医を務めたことです。健診で診た子が、親になって自分の子を連れてくる。三代にわたって診たご家族もあります。町医者にしかできない仕事だと思っています。</p>
+      </div>
+      <div class="qa">
+        <p class="qa-q">若い医師に伝えたいことはありますか</p>
+        <p class="qa-a">町の医者は、地域の一部になることが仕事です。専門を深めることも大事ですが、その方の暮らしを知らなければ、本当の診療にはなりません。</p>
+      </div>
+    </div>
+    <p class="note">※ ご家族への言葉、恩師とのやりとりなど、限定公開としている内容は「ご家族限定」ページに収めています。</p>
+  </section>
+
+  <!-- ================= 業績 ================= -->
+  <section class="panel" id="panel-works" role="tabpanel" aria-labelledby="tab-works">
+    <h2 class="sec"><span class="en">ACHIEVEMENTS</span>業績・活動</h2>
+    <p class="note">業績は「選んで追加する」項目です。この見本では、開業医の先生に多い4種類のみを登録しています。</p>
+
+    <h3 class="sub">資格・専門医</h3>
+    <ul class="works card" style="box-shadow:none">
+      <li><span class="y">1978年</span>医師免許 取得</li>
+      <li><span class="y">1986年</span>日本内科学会 認定内科医</li>
+      <li><span class="y">1992年</span>日本消化器内視鏡学会 専門医</li>
+      <li><span class="y">1996年</span>日本医師会 認定産業医</li>
+    </ul>
+
+    <h3 class="sub">所属団体・委員歴</h3>
+    <ul class="works card" style="box-shadow:none">
+      <li><span class="y">1982年–</span>日本内科学会／日本消化器病学会／日本プライマリ・ケア連合学会</li>
+      <li><span class="y">1988–2016年</span>○○区 学校医（3小学校を担当）</li>
+      <li><span class="y">2005–2011年</span>○○区医師会 理事（地域医療委員会）</li>
+      <li><span class="y">2012–2020年</span>○○区 胃がん検診 担当医</li>
+    </ul>
+
+    <h3 class="sub">講演・市民啓発</h3>
+    <ul class="works card" style="box-shadow:none">
+      <li><span class="y">1998年</span><span class="badge">市民講座</span>「かぜと肺炎のちがい」／○○公民館</li>
+      <li><span class="y">2006年</span><span class="badge">市民講座</span>「胃の検査をこわがらないために」／○○区保健センター</li>
+      <li><span class="y">2015年</span><span class="badge">研修会</span>「在宅で看取るということ」／○○区医師会 研修会</li>
+      <li><span class="y">2019年</span><span class="badge">授業</span>「いのちの授業」／○○小学校 6年生</li>
+    </ul>
+
+    <h3 class="sub">受賞・表彰</h3>
+    <ul class="works card" style="box-shadow:none">
+      <li><span class="y">2001年</span>○○区教育委員会 感謝状（学校医功労）</li>
+      <li><span class="y">2016年</span>○○区医師会 会長表彰（地域医療への貢献）</li>
+    </ul>
+  </section>
+
+  <!-- ================= 家族限定 ================= -->
+  <section class="panel" id="panel-family" role="tabpanel" aria-labelledby="tab-family">
+    <h2 class="sec"><span class="en">FOR FAMILY</span>ご家族・関係者限定ページ</h2>
+
+    <div id="lockView" class="lock">
+      <div class="card">
+        <p class="lock-icon">🔒</p>
+        <p>このページは、ご家族・関係者の方のみご覧いただけます。<br>お渡ししたパスワードを入力してください。</p>
+        <p style="margin:18px 0 8px">
+          <input id="pw" type="password" inputmode="numeric" placeholder="＿＿＿＿" aria-label="パスワード">
+        </p>
+        <p><button class="btn" id="pwBtn">開く</button></p>
+        <p class="err" id="pwErr" role="alert"></p>
+        <p class="hint">見本ページのため、パスワードは <b>1981</b> です。<br>（実際は、ご家族ごとに異なるパスワードをお渡しします）</p>
+      </div>
+    </div>
+
+    <div id="familyView" hidden>
+      <p class="private-only">ここから下は、公開ページには表示されない内容です。</p>
+
+      <h3 class="sub">家族への手紙</h3>
+      <div class="card">
+        <p>この記録を、いちばん読んでほしいのは孫たちです。</p>
+        <p>おじいちゃんは43年間、この町でお医者さんをしていました。えらい研究をしたわけでも、大きな病院の院長になったわけでもありません。ただ、風邪の子どもを診て、お年寄りの家に行って、それを毎日続けただけです。</p>
+        <p>それでも、道で「先生」と呼ばれるようになりました。人の役に立つというのは、たぶんそういうことの積み重ねなのだと思います。何かに迷ったときに、これを読んでくれたらうれしい。</p>
+        <p class="note">2026年　祖父より</p>
+      </div>
+
+      <h3 class="sub">公開していない写真</h3>
+      <div class="album">
+        <figure class="shot"><div class="ph sq">家族写真</div><figcaption class="shot-meta"><span class="shot-year">1983年</span><p class="shot-title">医院の前で。長男が生まれた年</p></figcaption></figure>
+        <figure class="shot"><div class="ph sq">自宅の食卓</div><figcaption class="shot-meta"><span class="shot-year">1992年</span><p class="shot-title">往診から帰った夜</p></figcaption></figure>
+        <figure class="shot"><div class="ph sq">妻とスタッフ</div><figcaption class="shot-meta"><span class="shot-year">1981年</span><p class="shot-title">開業を支えてくれた妻・和子</p></figcaption></figure>
+        <figure class="shot"><div class="ph sq">孫と</div><figcaption class="shot-meta"><span class="shot-year">2019年</span><p class="shot-title">診察室で聴診器を持たせた日</p></figcaption></figure>
+      </div>
+
+      <h3 class="sub">恩師の言葉・書き残したこと</h3>
+      <div class="card">
+        <div class="qa">
+          <p class="qa-q">△△先生からの葉書（1985年）</p>
+          <p class="qa-a">「開業して4年か。数字を追うな、顔を見ろ。君はそれができる」──この葉書は、机の引き出しに入れたままにしてあります。</p>
+        </div>
+        <div class="qa">
+          <p class="qa-q">妻へ</p>
+          <p class="qa-a">開業した年、看護師も受付も君ひとりだった。夜中に往診へ出るとき、いつも「気をつけて」と言ってくれた。あの言葉に何度も助けられました。</p>
+        </div>
+      </div>
+
+      <h3 class="sub">音声・動画</h3>
+      <div class="card">
+        <p><span class="badge">音声</span>「開業したころの話」（12分／2026年 収録）</p>
+        <p><span class="badge">動画</span>「孫たちへ」（4分／2026年 収録）</p>
+        <p class="note">※ 見本のため、再生はできません。</p>
+      </div>
+
+      <h3 class="sub">記録の引き継ぎについて</h3>
+      <div class="card">
+        <ul class="p-meta" style="font-size:15.5px">
+          <li><b>引き継ぐ方</b><span>長男 牧野 誠（二代院長）／長女 ○○</span></li>
+          <li><b>閲覧権限</b><span>ご家族6名／医院スタッフ（公開ページのみ）</span></li>
+          <li><b>逝去後の方針</b><span>公開ページはそのまま継続、家族限定ページは家族のみ</span></li>
+          <li><b>製本</b><span>2027年に記念冊子として製本を希望</span></li>
+          <li><b>データのお渡し</b><span>毎年1回、PDFと写真一式をご家族へお渡し</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="inner">
+    <p>ドクターズ・アーカイブ（仮称）　― 医師として歩んだ人生を、ご家族と社会に残すサービス ―</p>
+    <p>この見本ページは企画のイメージをお伝えするために作成したものです。掲載内容はすべて架空です。</p>
+    <div class="qr">
+      <div class="ph">QR</div>
+      <div style="font-size:13px;line-height:1.7">名刺・挨拶状・記念冊子にQRコードを印刷し、<br>ご家族や患者さんがすぐ開けるようにします。</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ---- タブ切り替え ----
+var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
+function openTab(tab){
+  tabs.forEach(function(t){
+    var on = (t === tab);
+    t.setAttribute('aria-selected', on ? 'true' : 'false');
+    var panel = document.getElementById(t.getAttribute('aria-controls'));
+    panel.classList.toggle('is-open', on);
+  });
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+tabs.forEach(function(t){
+  t.addEventListener('click', function(){ openTab(t); });
+});
+// ヘッダーの「ご家族・関係者の方」リンク
+document.querySelector('.head-btn').addEventListener('click', function(e){
+  e.preventDefault();
+  openTab(document.getElementById('tab-family'));
+});
+
+// ---- 写真アルバムの絞り込み ----
+var filters = Array.prototype.slice.call(document.querySelectorAll('.filter'));
+filters.forEach(function(f){
+  f.addEventListener('click', function(){
+    filters.forEach(function(x){ x.setAttribute('aria-pressed', x === f ? 'true' : 'false'); });
+    var cat = f.getAttribute('data-cat');
+    document.querySelectorAll('#panel-album .shot').forEach(function(s){
+      s.style.display = (cat === 'all' || s.getAttribute('data-cat') === cat) ? '' : 'none';
+    });
+  });
+});
+
+// ---- 家族限定ページ（見本用の簡易パスワード） ----
+var pw = document.getElementById('pw');
+var pwBtn = document.getElementById('pwBtn');
+var pwErr = document.getElementById('pwErr');
+function tryOpen(){
+  if (pw.value.trim() === '1981'){
+    document.getElementById('lockView').hidden = true;
+    document.getElementById('familyView').hidden = false;
+    pwErr.textContent = '';
+  } else {
+    pwErr.textContent = 'パスワードが違います。見本では 1981 です。';
+    pw.value = '';
+    pw.focus();
+  }
+}
+pwBtn.addEventListener('click', tryOpen);
+pw.addEventListener('keydown', function(e){ if (e.key === 'Enter') tryOpen(); });
+</script>
+
+</body>
+</html>
